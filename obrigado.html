@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Your Ritual is Confirmed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --primary-gold: #D4AF37;
+            --text-main: #F4F4F5;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        body, html {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden; /* Correção das bordas que fizemos antes */
+        }
+
+        .thank-you-container {
+            max-width: 500px;
+            width: 90%;
+            padding: 40px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--primary-gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: #d1d1d1;
+        }
+
+        .highlight {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .check-icon {
+            font-size: 50px;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thank-you-container">
+        <div class="check-icon">✓</div>
+        <h1>Your Ritual is Confirmed!</h1>
+        
+        <p>Thank you for trusting <span class="highlight">Madame Gisele</span> with your intentions.</p>
+        
+        <p>Your payment of <span class="highlight">£25.00</span> has been processed successfully.</p>
+        
+        <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 20px 0;">
+
+        <p><strong>Next Step:</strong> Madame Gisele will contact you shortly via the <span class="highlight">WhatsApp number</span> you provided during checkout to gather more details and finalise your ritual.</p>
+
+        <p class="footer-note">Please keep your phone nearby. The energy is already moving.</p>
+    </div>
+
+</body>
+</html>
