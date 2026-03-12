@@ -1134,49 +1134,71 @@ html, body {
                 } catch (e) { }
             });
         });
- // 6. URL Params Preservation (Anti-fail snippet) - O código que já existia
-        document.addEventListener("DOMContentLoaded", () => {
-            // ... (mantenha o código original de parâmetros aqui)
-        });
-
-        // --- SEU CÓDIGO DE TRADUÇÃO (Versão corrigida e limpa) ---
+ // --- SEU NOVO CÓDIGO DE TRADUÇÃO COMPLETO ---
         const userLang = navigator.language || navigator.userLanguage; 
         if (userLang.startsWith('es')) {
             document.addEventListener("DOMContentLoaded", function() {
+                // 1. Headline e Botões
                 const h1 = document.querySelector('#headline');
                 if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
-                
                 const p = document.querySelector('#subheadline');
                 if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos ya pueden estar ocupados.";
-                
                 const heroBtn = document.querySelector('#hero-btn');
                 if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
-                
                 const price = document.querySelector('#price-text');
                 if(price) price.innerText = "$17";
-
                 const buyBtn = document.querySelector('.kiwify-link');
-                if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+                if(buyBtn) buyBtn.innerText = "¡SÍ! QUIERO ASEGURAR MI LUGAR POR $17";
 
-                const t1 = document.querySelector('#card-title-1');
-                if(t1) t1.innerText = "¿Qué es el Ritual Colectivo?";
-                
-                const t2 = document.querySelector('#card-title-2');
-                if(t2) t2.innerText = "¿Qué es lo que recibes?";
-                
-                const t3 = document.querySelector('#card-title-3');
-                if(t3) t3.innerText = "¿Cuándo aparecen los efectos?";
-                
-                const t4 = document.querySelector('#card-title-4');
-                if(t4) t4.innerText = "¿Y el precio?";
-                
+                // 2. Topo e Contagem Regressiva
                 const topBar = document.querySelector('.top-bar-alert');
                 if(topBar) topBar.innerText = "¿Verás a otra persona vivir lo que era para ti?";
+                const cdText = document.querySelector('.countdown-text span');
+                if(cdText) cdText.innerText = "Cuidado, la oferta termina en:";
+                const labels = document.querySelectorAll('.time-box .lbl');
+                if(labels.length > 0) {
+                    labels[0].innerText = "HORAS"; labels[1].innerText = "MIN"; labels[2].innerText = "SEG";
+                }
+
+                // 3. Oferta (Preço riscado e frase)
+                const offerP = document.querySelector('.price-box p');
+                if(offerP) offerP.innerHTML = 'De <span class="old-price">$143</span> a solo';
+
+                // 4. Bio da Madame Gisele
+                const bioTexts = document.querySelectorAll('.bio-content p');
+                if(bioTexts[0]) bioTexts[0].innerText = "CONOCE A";
+                if(bioTexts[1]) bioTexts[1].innerText = "Ritualizo Reencuentros Imposibles. Por más de 15 años, he ayudado a restaurar lazos, abrir caminos y encontrar lo que parecía perdido.";
+                if(bioTexts[2]) bioTexts[2].innerText = "Soy Madame Gisele, hija de la religión y guardiana de secretos que no se explican, se sienten.";
+                if(bioTexts[3]) bioTexts[3].innerText = "Hoy lidero la Espiritualidad Hijas de Oro y continúo la misión de mujeres que conocen la fuerza de la fe silenciosa.";
+
+                // 5. Testemunhos
+                const testTitle = document.querySelector('.testimonials h2');
+                if(testTitle) testTitle.innerText = "Testimonios Reales";
+                document.querySelectorAll('.testi-text').forEach(t => {
+                    if(t.innerText.includes("My ex")) t.innerText = '"Mi ex estaba en otra relação y pensé que no había forma. ¡Pero algo cambió! De repente, ella empezó a buscarme..."';
+                    if(t.innerText.includes("I had lost hope")) t.innerText = '"Había perdido la esperanza. Él me bloqueó en todo, dijo que no quería volver a verme. Pero después del trabajo, ¡fue increíble!..."';
+                    if(t.innerText.includes("Months of trying")) t.innerText = '"Meses intentando, llorando, sin saber qué hacer. Cuando hice el trabajo, sentí que algo pasaba. Al tercer día, apareció en mi puerta..."';
+                });
+
+                // 6. FAQ
+                const faqTitle = document.querySelector('.faq-section h2');
+                if(faqTitle) faqTitle.innerText = "Preguntas Frecuentes";
+                const faqs = document.querySelectorAll('.faq-item');
+                if(faqs[0]) {
+                    faqs[0].querySelector('.faq-question').innerHTML = '¿Tendré acceso a ti? <i class="fa-solid fa-chevron-down"></i>';
+                    faqs[0].querySelector('.faq-answer p').innerText = "Sí, este trabajo requiere seguimiento, por lo que tendrás apoyo directo conmigo en mi WhatsApp privado.";
+                }
+                if(faqs[1]) {
+                    faqs[1].querySelector('.faq-question').innerHTML = '¿Cuál es el plazo para ver resultados? <i class="fa-solid fa-chevron-down"></i>';
+                    faqs[1].querySelector('.faq-answer p').innerText = "Estamos tratando con magia y encantamiento, el plazo promedio es de 7 a 14 días, variando en cada caso.";
+                }
             });
         }
     </script>
 </body>
 </html>
+
+      
 
 
 
