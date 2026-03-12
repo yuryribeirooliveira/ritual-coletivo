@@ -1134,47 +1134,48 @@ html, body {
                 } catch (e) { }
             });
         });
-  }
-     if (userLang.startsWith('es')) {
-      document.addEventListener("DOMContentLoaded", function() {
-        // 1. Traduções que você já tinha feito
-        const h1 = document.querySelector('#headline');
-        if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
-        
-        const p = document.querySelector('#subheadline');
-        if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos ya pueden estar ocupados.";
-        
-        const heroBtn = document.querySelector('#hero-btn');
-        if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
-        
-        const price = document.querySelector('#price-text');
-        if(price) price.innerText = "$17";
+ // 6. URL Params Preservation (Anti-fail snippet) - O código que já existia
+        document.addEventListener("DOMContentLoaded", () => {
+            // ... (mantenha o código original de parâmetros aqui)
+        });
 
-        const buyBtn = document.querySelector('.kiwify-link');
-        if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+        // --- SEU CÓDIGO DE TRADUÇÃO (Versão corrigida e limpa) ---
+        const userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('es')) {
+            document.addEventListener("DOMContentLoaded", function() {
+                const h1 = document.querySelector('#headline');
+                if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
+                
+                const p = document.querySelector('#subheadline');
+                if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos ya pueden estar ocupados.";
+                
+                const heroBtn = document.querySelector('#hero-btn');
+                if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
+                
+                const price = document.querySelector('#price-text');
+                if(price) price.innerText = "$17";
 
-        // 2. Tradução dos 4 Cards (O que você adicionou agora)
-        const t1 = document.querySelector('#card-title-1');
-        if(t1) t1.innerText = "¿Qué es el Ritual Colectivo?";
-        
-        const t2 = document.querySelector('#card-title-2');
-        if(t2) t2.innerText = "¿Qué es lo que recibes?";
-        
-        const t3 = document.querySelector('#card-title-3');
-        if(t3) t3.innerText = "¿Cuándo aparecen los efectos?";
-        
-        const t4 = document.querySelector('#card-title-4');
-        if(t4) t4.innerText = "¿Y el precio?";
-        
-        // 3. Tradução do alerta do topo
-        const topBar = document.querySelector('.top-bar-alert');
-        if(topBar) topBar.innerText = "¿Verás a otra persona vivir lo que era para ti?";
-      });
-    }
-  }
+                const buyBtn = document.querySelector('.kiwify-link');
+                if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+
+                const t1 = document.querySelector('#card-title-1');
+                if(t1) t1.innerText = "¿Qué es el Ritual Colectivo?";
+                
+                const t2 = document.querySelector('#card-title-2');
+                if(t2) t2.innerText = "¿Qué es lo que recibes?";
+                
+                const t3 = document.querySelector('#card-title-3');
+                if(t3) t3.innerText = "¿Cuándo aparecen los efectos?";
+                
+                const t4 = document.querySelector('#card-title-4');
+                if(t4) t4.innerText = "¿Y el precio?";
+                
+                const topBar = document.querySelector('.top-bar-alert');
+                if(topBar) topBar.innerText = "¿Verás a otra persona vivir lo que era para ti?";
+            });
+        }
     </script>
 </body>
-
 </html>
 
 
