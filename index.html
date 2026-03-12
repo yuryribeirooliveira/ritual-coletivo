@@ -753,13 +753,12 @@ html, body {
     <section class="hero">
         <div class="hero-grid">
             <div class="hero-content reveal">
-                <h1 class="hero-title">The person you love won't wait for you to decide.</h1>
-                <p class="hero-subtitle">While you hesitate, <strong><em>the heart and bed</em></strong> that were yours
-                    might already be occupied.</p>
+<h1 class="hero-title" id="headline">The person you love won't wait for you to decide.</h1>
+              <p class="hero-subtitle" id="subheadline">While you hesitate, <strong><em>the heart and bed</em></strong> that were yours might already be occupied.</p>
                 <p style="margin-bottom: 30px; font-size: 18px;">This ritual is for those who <span
                         style="color: var(--accent-red); font-weight:800;">DO NOT</span> accept losing what is theirs.
                 </p>
-                <a href="#offer" class="btn-buy">Enter the Ritual Now 💫</a>
+                <a href="#offer" class="btn-buy" id="hero-btn">Enter the Ritual Now 💫</a>
             </div>
             <div class="hero-video reveal" style="transition-delay: 0.2s;">
                 <div class="video-wrapper glass-panel">
@@ -944,9 +943,8 @@ html, body {
 
         <div class="price-box glass-panel reveal">
             <p style="font-size: 18px; text-transform: uppercase;">From <span class="old-price">£143</span> To Only</p>
-            <div class="new-price">£17</div>
-            <a href="https://pay.kiwify.com/RfYrLfo" class="btn-buy" style="width: 100%;">Yes! I
-                want to secure my spot for £17</a>
+           <div class="new-price" id="price-text">£17</div>
+            <a href="https://pay.kiwify.com.br/RfYrLfo" class="btn-buy kiwify-link" style="width: 100%;">Yes! I want to secure my spot for £17</a>
         </div>
     </section>
 
@@ -1136,10 +1134,34 @@ html, body {
                 } catch (e) { }
             });
         });
+        // --- Automação para LATAM (Tradução e Moeda) ---
+  const userLang = navigator.language || navigator.userLanguage; 
+  if (userLang.startsWith('es')) {
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Traduz o Título e o Subtítulo
+      const h1 = document.querySelector('#headline');
+      if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
+      
+      const p = document.querySelector('#subheadline');
+      if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eram tuyos ya podem estar ocupados.";
+      
+      // 2. Traduz os Botões (Topo e Oferta)
+      const heroBtn = document.querySelector('#hero-btn');
+      if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
+      
+      const buyBtn = document.querySelector('.kiwify-link');
+      if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+
+      // 3. Muda o Símbolo da Moeda no Preço Principal
+      const price = document.querySelector('#price-text');
+      if(price) price.innerText = "$17";
+    });
+  }
     </script>
 </body>
 
 </html>
+
 
 
 
