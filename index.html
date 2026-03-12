@@ -900,14 +900,14 @@ html, body {
         <div class="doubts-grid">
             <div class="doubt-card glass-panel reveal">
                 <div class="doubt-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
-                <h3>What is the Collective Ritual?</h3>
+                <h3 id="card-title-1">What is the Collective Ritual?</h3>
                 <p>Love work channeled by me, <strong>Madame Gisele</strong>. <em>Only 10 participants per day.</em>
                     Each name is entered with real intuition and intention. It's not a mere spell. It's magic with
                     foundation.</p>
             </div>
             <div class="doubt-card glass-panel reveal" style="transition-delay: 0.1s;">
                 <div class="doubt-icon"><i class="fa-solid fa-gift"></i></div>
-                <h3>What do you receive?</h3>
+               <h3 id="card-title-2">What do you receive?</h3>
                 <ul>
                     <li>Your name and the person's name secured in the ritual;</li>
                     <li>Channeled intention based on your truth;</li>
@@ -917,14 +917,14 @@ html, body {
             </div>
             <div class="doubt-card glass-panel reveal" style="transition-delay: 0.2s;">
                 <div class="doubt-icon"><i class="fa-solid fa-hourglass-start"></i></div>
-                <h3>When do the effects appear?</h3>
+              <h3 id="card-title-3">When do the effects appear?</h3>
                 <p><strong><em>Between 7 and 14 days.</em></strong> The first signs appear as subtle changes — messages,
                     encounters, unblocking. Every energy has its time. But if you felt it, it's because it has already
                     started.</p>
             </div>
             <div class="doubt-card glass-panel reveal" style="transition-delay: 0.3s;">
                 <div class="doubt-icon"><i class="fa-solid fa-gem"></i></div>
-                <h3>And the price?</h3>
+               <h3 id="card-title-4">And the price?</h3>
                 <p><strong>£17</strong>, a symbolic value. It guarantees your entry and firms your intention.
                     <strong><em>It is not about the price... It's about the truth of what YOU desire.</em></strong>
                 </p>
@@ -1134,33 +1134,49 @@ html, body {
                 } catch (e) { }
             });
         });
-        // --- Automação para LATAM (Tradução e Moeda) ---
-  const userLang = navigator.language || navigator.userLanguage; 
-  if (userLang.startsWith('es')) {
-    document.addEventListener("DOMContentLoaded", function() {
-      // 1. Traduz o Título e o Subtítulo
-      const h1 = document.querySelector('#headline');
-      if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
-      
-      const p = document.querySelector('#subheadline');
-      if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eram tuyos ya podem estar ocupados.";
-      
-      // 2. Traduz os Botões (Topo e Oferta)
-      const heroBtn = document.querySelector('#hero-btn');
-      if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
-      
-      const buyBtn = document.querySelector('.kiwify-link');
-      if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+  }
+     if (userLang.startsWith('es')) {
+      document.addEventListener("DOMContentLoaded", function() {
+        // 1. Traduções que você já tinha feito
+        const h1 = document.querySelector('#headline');
+        if(h1) h1.innerText = "La persona que amas no esperará a que te decidas.";
+        
+        const p = document.querySelector('#subheadline');
+        if(p) p.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos ya pueden estar ocupados.";
+        
+        const heroBtn = document.querySelector('#hero-btn');
+        if(heroBtn) heroBtn.innerText = "Entra en el Ritual Ahora 💫";
+        
+        const price = document.querySelector('#price-text');
+        if(price) price.innerText = "$17";
 
-      // 3. Muda o Símbolo da Moeda no Preço Principal
-      const price = document.querySelector('#price-text');
-      if(price) price.innerText = "$17";
-    });
+        const buyBtn = document.querySelector('.kiwify-link');
+        if(buyBtn) buyBtn.innerText = "¡Sí! Quiero asegurar mi lugar por $17";
+
+        // 2. Tradução dos 4 Cards (O que você adicionou agora)
+        const t1 = document.querySelector('#card-title-1');
+        if(t1) t1.innerText = "¿Qué es el Ritual Colectivo?";
+        
+        const t2 = document.querySelector('#card-title-2');
+        if(t2) t2.innerText = "¿Qué es lo que recibes?";
+        
+        const t3 = document.querySelector('#card-title-3');
+        if(t3) t3.innerText = "¿Cuándo aparecen los efectos?";
+        
+        const t4 = document.querySelector('#card-title-4');
+        if(t4) t4.innerText = "¿Y el precio?";
+        
+        // 3. Tradução do alerta do topo
+        const topBar = document.querySelector('.top-bar-alert');
+        if(topBar) topBar.innerText = "¿Verás a otra persona vivir lo que era para ti?";
+      });
+    }
   }
     </script>
 </body>
 
 </html>
+
 
 
 
