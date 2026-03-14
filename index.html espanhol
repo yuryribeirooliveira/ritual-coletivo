@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritual Colectivo - Madame Gisele</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #050505;
+            --surface-color: #111111;
+            --primary-gold: #D4AF37;
+            --primary-gold-light: #F3E5AB;
+            --text-main: #F4F4F5;
+            --text-muted: #A1A1AA;
+            --accent-red: #E74C3C;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .heading-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .top-bar-alert {
+            background: var(--primary-gold);
+            color: #000;
+            text-align: center;
+            padding: 8px 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .countdown-banner {
+            background: #ffffff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown-text {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .countdown-timer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .time-box .num { font-size: 28px; }
+        .time-box .lbl { font-size: 10px; font-weight: 600; }
+        .dots { font-size: 24px; padding-bottom: 12px; }
+
+        .hero {
+            padding: 80px 5% 100px;
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.15;
+            background: linear-gradient(to right, #ffffff, var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .hero-subtitle strong {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-gold) 0%, #FFF2B2 50%, var(--primary-gold) 100%);
+            color: #000;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 20px 45px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            animation: pulse-gold 2s infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        @keyframes pulse-gold {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+            50% { transform: scale(1.03); box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--glass-border);
+        }
+
+        .video-wrapper video { width: 100%; display: block; }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            border: 2px solid var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .testimonials { padding: 80px 0; background: var(--surface-color); overflow: hidden; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: #fff; }
+        .carousel-track { display: flex; gap: 25px; animation: scroll-left 40s linear infinite; width: fit-content; padding: 0 25px; }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 12.5px)); }
+        }
+
+        .testimonial-card { width: 380px; padding: 30px; }
+        .testi-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .testi-header img { width: 55px; height: 55px; border-radius: 50%; border: 2px solid var(--primary-gold); }
+        .stars { color: var(--primary-gold); font-size: 14px; }
+
+        .doubts-section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+        .doubts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 50px; }
+        .doubt-card { padding: 40px; }
+        .doubt-icon { width: 60px; height: 60px; background: var(--primary-gold); color: #000; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 25px; }
+
+        .offer-section { background: radial-gradient(circle at center, #1a1505 0%, var(--bg-color) 70%); padding: 100px 5%; text-align: center; }
+        .old-price { font-size: 24px; color: var(--accent-red); text-decoration: line-through; }
+        .new-price { font-size: 90px; font-family: 'Cinzel', serif; color: var(--primary-gold); text-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
+
+        .bio-section { padding: 100px 5%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        .bio-img { width: 100%; border-radius: 20px; border: 1px solid var(--glass-border); }
+
+        .faq-section { padding: 80px 5%; max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--glass-border); }
+        .faq-question { padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: all 0.4s ease; color: var(--text-muted); }
+        .faq-item.active .faq-answer { max-height: 300px; padding-bottom: 20px; }
+
+        footer { border-top: 1px solid var(--glass-border); padding: 40px 5%; text-align: center; color: var(--text-muted); }
+
+        .toast-popup { position: fixed; bottom: 30px; left: 30px; background: rgba(20, 20, 20, 0.95); border: 1px solid var(--primary-gold); padding: 15px 25px; border-radius: 12px; display: flex; align-items: center; gap: 15px; z-index: 9999; transform: translateX(-150%); transition: all 0.5s; }
+        .toast-popup.show { transform: translateX(0); }
+
+        @media (max-width: 992px) { .hero-grid, .bio-section { grid-template-columns: 1fr; text-align: center; } .doubts-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) return false;
+        };
+    </script>
+    <style>body { user-select: none; -webkit-user-select: none; } img, video { pointer-events: none; } .play-btn, a, button, .faq-question { pointer-events: auto; }</style>
+
+    <div class="top-bar-alert">
+        ¿Vas a ver a alguien más vivir lo que estaba destinado para ti?
+    </div>
+
+    <div class="countdown-banner">
+        <div class="countdown-text">
+            <i class="fa-solid fa-hourglass-half" style="color: var(--accent-red);"></i>
+            <span>Atención, la oferta termina en:</span>
+        </div>
+        <div class="countdown-timer" id="timer">
+            <div class="time-box"><span class="num" id="hours">00</span><span class="lbl">HORAS</span></div>
+            <span class="dots">:</span>
+            <div class="time-box"><span class="num" id="minutes">03</span><span class="lbl">MIN</span></div>
+            <span class="dots">:</span>
+            <div class="time-box"><span class="num" id="seconds">46</span><span class="lbl">SEG</span></div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-content reveal">
+                <h1 class="hero-title">La persona que amas no esperará a que te decidas.</h1>
+                <p class="hero-subtitle">Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos
+                    podrían estar ya ocupados.</p>
+                <p style="margin-bottom: 30px; font-size: 18px;">Este ritual es para quienes <span
+                        style="color: var(--accent-red); font-weight:800;">NO</span> aceptan perder lo que les pertenece.
+                </p>
+                <a href="#offer" class="btn-buy">Entrar al Ritual Ahora 💫</a>
+            </div>
+            <div class="hero-video reveal" style="transition-delay: 0.2s;">
+                <div class="video-wrapper glass-panel">
+                    <video id="hero-vid" src="https://res.cloudinary.com/daulxi9ve/video/upload/v1/video_oferta_gi_1_uxnbbf.mp4" poster="https://i.ibb.co/G4SG0B4r/photo-2025-12-03-20-27-28.jpg" playsinline></video>
+                    <div class="play-btn" id="play-btn">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title heading-font reveal">Testimonios Reales</h2>
+        <div class="carousel-track">
+            <div class="testimonial-card glass-panel">
+                <div class="testi-header">
+                    <img src="https://models-setembro.b-cdn.net/Materiais%20Site%20Geral/Captura%20de%20Tela%202025-08-26%20a%CC%80s%2021.56.33.png" alt="Usuario">
+                    <div class="testi-meta">
+                        <h4>Pietro Evans</h4>
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="testi-text">"Mi ex estaba en otra relación y pensé que no había manera. ¡Pero algo cambió! De repente, empezó a buscarme..."</p>
+            </div>
+            <div class="testimonial-card glass-panel">
+                <div class="testi-header">
+                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_11_464074796_1656433281585543_5123980663136705929_n.webp" alt="Usuario">
+                    <div class="testi-meta">
+                        <h4>Liv Miller</h4>
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="testi-text">"Había perdido la esperanza. Me bloqueó de todo. ¡Pero después del trabajo, fue increíble!..."</p>
+            </div>
+            <div class="testimonial-card glass-panel">
+                <div class="testi-header">
+                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_2_543692285_17849010216553526_5338883046309995010_n.webp" alt="Usuario">
+                    <div class="testi-meta">
+                        <h4>Sandra Davies</h4>
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="testi-text">"Meses intentando y llorando. Al tercer día de hacer el trabajo, apareció en mi puerta..."</p>
+            </div>
+            <div class="testimonial-card glass-panel">
+                <div class="testi-header">
+                    <img src="https://models-setembro.b-cdn.net/Materiais%20Site%20Geral/Captura%20de%20Tela%202025-08-26%20a%CC%80s%2021.56.33.png" alt="Usuario">
+                    <div class="testi-meta">
+                        <h4>Pietro Evans</h4>
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="testi-text">"Mi ex estaba en otra relación y pensé que no había manera. ¡Pero algo cambió!..."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="doubts-section">
+        <div style="text-align: center;" class="reveal">
+            <h2 class="section-title heading-font">¿Aún lo sientes pero no te decides?</h2>
+            <p style="font-size: 18px; color: var(--text-muted);">Aquí tienes <strong>4 señales</strong> de que este ritual es para <strong>TI.</strong></p>
+        </div>
+
+        <div class="doubts-grid">
+            <div class="doubt-card glass-panel reveal">
+                <div class="doubt-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
+                <h3>¿Qué es el Ritual Colectivo?</h3>
+                <p>Trabajo de amor canalizado por mí, <strong>Madame Gisele</strong>. <em>Solo 10 participantes por día.</em> No es un simple hechizo, es magia con fundamento.</p>
+            </div>
+            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.1s;">
+                <div class="doubt-icon"><i class="fa-solid fa-gift"></i></div>
+                <h3>¿Qué recibes?</h3>
+                <ul>
+                    <li>Tu nombre y el de la persona asegurados;</li>
+                    <li>Intención canalizada en tu verdad;</li>
+                    <li><strong><em>Ritual grabado en video y enviado por WhatsApp;</em></strong></li>
+                    <li>Seguimiento personal directo conmigo.</li>
+                </ul>
+            </div>
+            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.2s;">
+                <div class="doubt-icon"><i class="fa-solid fa-hourglass-start"></i></div>
+                <h3>¿Cuándo aparecen los efectos?</h3>
+                <p><strong><em>Entre 7 y 14 días.</em></strong> Los primeros signos son sutiles: mensajes, encuentros, desbloqueos. Si lo sentiste, es porque ya comenzó.</p>
+            </div>
+            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.3s;">
+                <div class="doubt-icon"><i class="fa-solid fa-gem"></i></div>
+                <h3>¿Y el precio?</h3>
+                <p><strong>$17 USD</strong>, un valor simbólico para firmar tu intención. <strong><em>No se trata del precio... se trata de la verdad de tu deseo.</em></strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="offer-section">
+        <h2 class="offer-headline heading-font reveal">Asegura ahora tu <span>entrada al Ritual</span> Colectivo</h2>
+        <div class="video-wrapper glass-panel reveal" style="max-width: 600px; margin: 0 auto;">
+            <video src="https://models-setembro.b-cdn.net/Lilian/Vi%CC%81deo%20Oferta.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <div class="price-box glass-panel reveal">
+            <p style="font-size: 18px;">De <span class="old-price">$97</span> Por Solo</p>
+            <div class="new-price">$17</div>
+            <a href="https://pay.kiwify.com/GYoliV5" class="btn-buy" style="width: 100%;">¡Sí! Quiero asegurar mi lugar por $17</a>
+        </div>
+    </section>
+
+    <section class="bio-section">
+        <div class="reveal">
+            <img src="https://i.ibb.co/4wfLh9Wj/photo-2025-12-03-20-27-25.jpg" alt="Madame Gisele" class="bio-img">
+        </div>
+        <div class="bio-content reveal" style="transition-delay: 0.2s;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted);">Conoce a</p>
+            <h2 class="heading-font">MADAME GISELE</h2>
+            <p>Ritualizo Reencuentros Imposibles. Por más de 15 años, he ayudado a restaurar lazos y abrir caminos que parecían perdidos.</p>
+            <p>Soy Madame Gisele, hija de la religión y guardiana de secretos que no se explican, se sienten.</p>
+            <p>Hoy lidero la Espiritualidad Hijas de Oro y continúo la misión de mujeres que conocen la fuerza de la fe silenciosa.</p>
+        </div>
+    </section>
+
+    <section class="faq-section reveal">
+        <h2 class="section-title heading-font">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">¿Tendré acceso a ti? <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Sí, este trabajo requiere seguimiento, por lo que tendrás apoyo directo conmigo en mi WhatsApp privado.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">¿Cuál es el plazo de los resultados? <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Tratamos con magia y encantamiento; el plazo promedio es de 7 a 14 días, variando según cada caso.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">¿Debo pagar algo más? <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>No, este es un precio promocional único. No pagarás nada más de lo acordado.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">¿He hecho otros trabajos y no funcionaron? <i class="fa-solid fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Hiciste varios trabajos, pero NINGUNO fue conmigo. Soy directa, sincera y transparente con mis clientes.</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="#terms">Términos de Uso</a> | <a href="#privacy">Política de Privacidad</a>
+        </div>
+        <p>Copyright © 2025, todos los derechos reservados.</p>
+        <p style="margin-top: 10px; opacity: 0.6;">Espiritualidad Hijas de Oro <br> Horario: Lun - Vie 10:00 a 18:00 | Sáb - 10:00 a 15:00</p>
+    </footer>
+
+    <div class="toast-popup" id="toast">
+        <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+        <div class="toast-text" id="toast-msg">Alguien acaba de comprar</div>
+    </div>
+
+    <script>
+        // Countdown
+        const timeH = document.getElementById('hours'), timeM = document.getElementById('minutes'), timeS = document.getElementById('seconds');
+        let timeLeft = 300;
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) { clearInterval(timer); return; }
+            timeLeft--;
+            const h = Math.floor(timeLeft / 3600), m = Math.floor((timeLeft % 3600) / 60), s = timeLeft % 60;
+            timeH.textContent = String(h).padStart(2, '0');
+            timeM.textContent = String(m).padStart(2, '0');
+            timeS.textContent = String(s).padStart(2, '0');
+        }, 1000);
+
+        // Video
+        const video = document.getElementById('hero-vid'), playBtn = document.getElementById('play-btn');
+        if (video && playBtn) {
+            playBtn.addEventListener('click', () => { video.play(); playBtn.style.opacity = '0'; playBtn.style.pointerEvents = 'none'; });
+            video.addEventListener('click', () => { if(!video.paused){ video.pause(); playBtn.style.opacity = '1'; playBtn.style.pointerEvents = 'auto'; } });
+        }
+
+        // Reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); } });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // FAQ
+        document.querySelectorAll('.faq-item').forEach(faq => {
+            faq.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = faq.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('active'));
+                if (!isActive) faq.classList.add('active');
+            });
+        });
+
+        // Toast
+        const names = ["Amelia J.", "Juan P.", "Ana L.", "Carlos A.", "Isla E.", "Pablo G.", "Ava T.", "Lucas F.", "Sofía H.", "Rafael T."];
+        function showToast() {
+            document.getElementById('toast-msg').textContent = `${names[Math.floor(Math.random() * names.length)]} acaba de comprar`;
+            document.getElementById('toast').classList.add('show');
+            setTimeout(() => document.getElementById('toast').classList.remove('show'), 4000);
+        }
+        setTimeout(() => { showToast(); setInterval(showToast, 14000); }, 5000);
+    </script>
+</body>
+</html>
