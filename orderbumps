@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones Ritual Completo - Madame Gisele</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            border: 2px solid #e0c068;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: #0d0d0d;
+            text-align: center;
+            font-size: 28px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e0c068;
+            padding-bottom: 20px;
+        }
+        .highlight-box {
+            background-color: #fcf8e8;
+            border-left: 5px solid #e0c068;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            color: #b08d2b;
+        }
+        p { margin-bottom: 15px; }
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 30px auto;
+            padding: 18px;
+            background-color: #25d366; /* Verde WhatsApp */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-top: 40px;
+        }
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .check { color: #25d366; margin-right: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Tu Ritual Completo está Listo ☆</h1>
+    
+    <p>¡Hola! Soy <strong>Madame Gisele</strong>.</p>
+    
+    <p>He recibido la confirmación de tu pedido. Quiero felicitarte por elegir no solo el ritual principal, sino también los <strong>refuerzos energéticos (Order Bumps)</strong>. Esto potenciará enormemente la frecuencia de tu pedido al universo.</p>
+
+    <div class="highlight-box">
+        <h2>ENTREGA UNIFICADA POR WHATSAPP</h2>
+        <p>Para tu mayor comodidad, <strong>tanto el ritual principal como tus rituais adicionales</strong> serán entregados y demostrados directamente a través de mi WhatsApp personal.</p>
+        <p>No necesitas buscar en diferentes lugares. Yo me encargaré de enviarte las fotos, videos y el seguimiento de todo tu trabajo en un solo lugar.</p>
+    </div>
+
+    <p><strong>Para comenzar ahora mismo, necesito que me envíes:</strong></p>
+    
+    <div class="list-item"><span class="check">✔</span> Nombres completos (tuyo y de la persona implicada).</div>
+    <div class="list-item"><span class="check">✔</span> Fechas de nacimiento o edades.</div>
+    <div class="list-item"><span class="check">✔</span> Una breve descripción de lo que deseas lograr con este combo completo.</div>
+
+    <a href="https://wa.me/351963156817?text=Hola%20Gisele,%20acabo%20de%20adquirir%20mi%20ritual%20completo%20con%20los%20refuerzos.%20Aquí%20están%20mis%20datos." class="cta-button">
+        CONTACTAR POR WHATSAPP
+    </a>
+
+    <p style="text-align: center; font-size: 14px;">
+        También puedes seguirme en Instagram para ver más testimonios:<br>
+        <a href="https://www.instagram.com/giseleromanotarot/" style="color: #b08d2b;">@giseleromanotarot</a>
+    </p>
+
+    <div class="footer">
+        Con luz y bendiciones,<br>
+        <strong>Madame Gisele Romano</strong>
+    </div>
+</div>
+
+</body>
+</html>
