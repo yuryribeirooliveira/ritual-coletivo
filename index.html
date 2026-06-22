@@ -1,1198 +1,1079 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collective Ritual - Madame Gisele</title>
-<meta property="og:image" content="https://i.ibb.co/RpzzFt8Q/Gemini-Generated-Image-sz1u1gsz1u1gsz1u.png">
-<meta property="og:title" content="Collective Ritual - Madame Gisele">
-<meta property="og:description" content="The person you love won't wait for you to decide. Join the ritual now.">
-    <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1230133249291670');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1230133249291670&ev=PageView&noscript=1"
-/></noscript>
-    <!-- Preconnect to Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Modern Fonts: Cinzel for premium mystical feel, Outfit for modern readability -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --bg-color: #050505;
-            --surface-color: #111111;
-            --primary-gold: #D4AF37;
-            --primary-gold-light: #F3E5AB;
-            --text-main: #F4F4F5;
-            --text-muted: #A1A1AA;
-            --accent-red: #E74C3C;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-        }
-html, body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>Controle Financeiro — Gisele Romano Tarot</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Financeiro Tarot" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#6741d9" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg:#f5f4f8; --bg2:#ffffff; --bg3:#eeedf4;
+  --purple:#6741d9; --purple2:#7c5ce8; --purple-lt:#ede9ff; --purple-xlt:#f5f3ff;
+  --text:#1a1825; --text2:#4a4560; --text3:#8a85a0; --border:#d8d5e8;
+  --ok:#2da44e; --ok-bg:#e6f4ea; --warn:#e67e22; --warn-bg:#fef3e2;
+  --over:#c0392b; --over-bg:#fde8e6;
+  --radius:14px; --radius-sm:8px;
+  --shadow:0 2px 16px rgba(103,65,217,.08); --shadow-md:0 4px 24px rgba(103,65,217,.14);
+  --footer-h:62px; --tr:.18s ease;
 }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Outfit', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3,
-        .heading-font {
-            font-family: 'Cinzel', serif;
-        }
-
-        /* --- Animations & Utilities --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.9s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        }
-
-        /* --- Countdown Bar --- */
-        .top-bar-alert {
-            background: var(--primary-gold);
-            color: #000;
-            text-align: center;
-            padding: 8px 20px;
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-
-        .countdown-banner {
-            background: #ffffff;
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .countdown-text {
-            font-weight: 600;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .countdown-timer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-        }
-
-        .time-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            line-height: 1;
-        }
-
-        .time-box .num {
-            font-size: 28px;
-        }
-
-        .time-box .lbl {
-            font-size: 10px;
-            font-weight: 600;
-        }
-
-        .dots {
-            font-size: 24px;
-            padding-bottom: 12px;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            padding: 80px 5% 100px;
-            max-width: 1280px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        /* Subtle glowing orb in background */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero-title {
-            font-size: 48px;
-            font-weight: 900;
-            line-height: 1.15;
-            background: linear-gradient(to right, #ffffff, var(--primary-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 24px;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .hero-subtitle strong {
-            color: var(--primary-gold);
-            font-weight: 600;
-        }
-
-        /* --- Pulsating Buy Button --- */
-        .btn-buy {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary-gold) 0%, #FFF2B2 50%, var(--primary-gold) 100%);
-            color: #000;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 18px;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 20px 45px;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-            animation: pulse-gold 2s infinite;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-buy::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(45deg);
-            animation: shimmer 3s infinite linear;
-        }
-
-        @keyframes pulse-gold {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
-            }
-
-            50% {
-                transform: scale(1.03);
-                box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
-            }
-
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
-            }
-        }
-
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%) rotate(45deg);
-            }
-
-            100% {
-                transform: translateX(100%) rotate(45deg);
-            }
-        }
-
-        .video-wrapper {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            border: 1px solid var(--glass-border);
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            display: block;
-        }
-
-        .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            border: 2px solid var(--primary-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .play-btn:hover {
-            background: var(--primary-gold);
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .play-btn i {
-            color: #fff;
-            font-size: 28px;
-            margin-left: 5px;
-        }
-
-        .play-btn:hover i {
-            color: #000;
-        }
-
-        /* --- Testimonials --- */
-        .testimonials {
-            padding: 80px 0;
-            background: var(--surface-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #fff;
-        }
-
-        .carousel-track {
-            display: flex;
-            gap: 25px;
-            animation: scroll-left 40s linear infinite;
-            width: fit-content;
-            padding: 0 25px;
-        }
-
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(calc(-50% - 12.5px));
-            }
-        }
-
-        .testimonial-card {
-            width: 380px;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testi-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .testi-header img {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary-gold);
-        }
-
-        .testi-meta h4 {
-            font-size: 18px;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .stars {
-            color: var(--primary-gold);
-            font-size: 14px;
-        }
-
-        .testi-text {
-            font-size: 15px;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        /* --- Features / Doubts Grid --- */
-        .doubts-section {
-            padding: 100px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .doubts-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .doubt-card {
-            padding: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .doubt-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-gold);
-            color: #000;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 25px;
-            transform: rotate(-5deg);
-            transition: transform 0.3s ease;
-        }
-
-        .doubt-card:hover .doubt-icon {
-            transform: rotate(0deg) scale(1.1);
-        }
-
-        .doubt-card h3 {
-            font-size: 22px;
-            color: #fff;
-            margin-bottom: 15px;
-        }
-
-        .doubt-card p,
-        .doubt-card ul {
-            color: var(--text-muted);
-            font-size: 16px;
-        }
-
-        .doubt-card ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .doubt-card ul li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-        }
-
-        .doubt-card ul li::before {
-            content: '\f058';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            top: 2px;
-            color: var(--primary-gold);
-        }
-
-        /* --- Offer Section --- */
-        .offer-section {
-            background: radial-gradient(circle at center, #1a1505 0%, var(--bg-color) 70%);
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        .offer-headline {
-            font-size: 40px;
-            margin-bottom: 40px;
-        }
-
-        .offer-headline span {
-            color: var(--primary-gold);
-        }
-
-        .price-box {
-            margin: 40px 0;
-            padding: 40px;
-            display: inline-block;
-            max-width: 600px;
-            width: 100%;
-        }
-
-        .old-price {
-            font-size: 24px;
-            color: var(--accent-red);
-            text-decoration: line-through;
-            font-weight: 600;
-        }
-
-        .new-price {
-            font-size: 90px;
-            font-family: 'Cinzel', serif;
-            font-weight: 900;
-            color: var(--primary-gold);
-            line-height: 1;
-            margin: 10px 0 30px;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-        }
-
-        /* --- Bio Section --- */
-        .bio-section {
-            padding: 100px 5%;
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .bio-img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            border: 1px solid var(--glass-border);
-        }
-
-        .bio-content h2 {
-            font-size: 46px;
-            color: var(--primary-gold);
-            margin-bottom: 30px;
-        }
-
-        .bio-content p {
-            font-size: 18px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        /* --- General Footer & FAQ --- */
-        .faq-section {
-            padding: 80px 5%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--glass-border);
-        }
-
-        .faq-question {
-            padding: 20px 0;
-            font-size: 20px;
-            font-weight: 600;
-            color: #fff;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s;
-        }
-
-        .faq-question:hover {
-            color: var(--primary-gold);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-            color: var(--text-muted);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-            padding-bottom: 20px;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        footer {
-            border-top: 1px solid var(--glass-border);
-            padding: 40px 5%;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        footer a {
-            color: var(--primary-gold);
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        /* --- Popup Toast --- */
-        .toast-popup {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background: rgba(20, 20, 20, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--primary-gold);
-            padding: 15px 25px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            z-index: 9999;
-            transform: translateX(-150%);
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .toast-popup.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .toast-icon {
-            width: 30px;
-            height: 30px;
-            background: #27ae60;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 14px;
-        }
-
-        .toast-text {
-            font-weight: 600;
-            font-size: 15px;
-            color: #fff;
-        }
-
-        /* --- Media Queries --- */
-        @media (max-width: 992px) {
-
-            .hero-grid,
-            .bio-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-title {
-                font-size: 38px;
-            }
-
-            .btn-buy {
-                width: 100%;
-                max-width: 350px;
-            }
-
-            .doubts-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .doubt-card {
-                text-align: left;
-            }
-
-            .bio-img {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .countdown-text span {
-                display: none;
-            }
-
-            .countdown-banner {
-                padding: 10px;
-            }
-
-            .time-box .num {
-                font-size: 20px;
-            }
-
-            .new-price {
-                font-size: 60px;
-            }
-
-            .hero-title {
-                font-size: 32px;
-            }
-
-            .toast-popup {
-                left: 15px;
-                bottom: 15px;
-                right: 15px;
-            }
-        }
-    </style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:"Poppins",sans-serif;font-size:15px;min-height:100vh;
+  padding-bottom:calc(var(--footer-h) + env(safe-area-inset-bottom,0px));overflow-x:hidden}
+
+/* AUTH */
+.auth-screen{position:fixed;inset:0;background:var(--bg);display:none;align-items:center;justify-content:center;padding:24px;z-index:9999}
+.auth-screen.visible{display:flex}
+.auth-box{background:var(--bg2);border-radius:var(--radius);padding:32px 28px;width:100%;max-width:400px;box-shadow:var(--shadow-md)}
+.auth-ornament{font-size:10px;letter-spacing:6px;color:var(--purple);opacity:.6;text-align:center;margin-bottom:4px}
+.auth-title{font-size:22px;font-weight:800;color:var(--text);text-align:center;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.auth-subtitle{font-size:12px;color:var(--text3);text-align:center;margin-bottom:28px}
+.auth-tabs{display:flex;background:var(--bg3);border-radius:var(--radius-sm);padding:3px;margin-bottom:24px}
+.auth-tab{flex:1;padding:8px;border:none;background:none;border-radius:6px;font-family:"Poppins",sans-serif;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;transition:all var(--tr)}
+.auth-tab.active{background:var(--bg2);color:var(--purple);box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.auth-field{margin-bottom:14px}
+.auth-field label{display:block;font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.auth-field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:14px;color:var(--text);background:var(--bg);transition:border-color var(--tr)}
+.auth-field input:focus{outline:none;border-color:var(--purple);background:var(--bg2)}
+.auth-btn{width:100%;padding:13px;background:var(--purple);color:#fff;border:none;border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background var(--tr);margin-top:4px}
+.auth-btn:hover{background:var(--purple2)}
+.auth-btn:disabled{opacity:.6;cursor:not-allowed}
+.auth-error{background:var(--over-bg);color:var(--over);border:1px solid #f7c1c1;border-radius:var(--radius-sm);padding:10px 14px;font-size:12px;font-weight:500;margin-bottom:14px;display:none}
+.auth-error.show{display:block}
+.auth-success{background:var(--ok-bg);color:var(--ok);border:1px solid #b6dfc4;border-radius:var(--radius-sm);padding:10px 14px;font-size:12px;font-weight:500;margin-bottom:14px;display:none;text-align:center}
+.auth-success.show{display:block}
+
+/* LOADING */
+.loading-overlay{position:fixed;inset:0;background:rgba(245,244,248,.95);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:8888;gap:14px}
+.loading-overlay.visible{display:flex}
+.loading-spinner{width:44px;height:44px;border:4px solid var(--purple-lt);border-top-color:var(--purple);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{font-size:13px;color:var(--text3);font-weight:500}
+
+/* SYNC */
+.sync-indicator{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:14px;background:var(--bg2);border:1px solid var(--border);border-radius:50px;padding:4px 10px;font-size:11px;font-weight:500;color:var(--text3);z-index:150;display:flex;align-items:center;gap:5px;opacity:0;transition:opacity .3s;pointer-events:none}
+.sync-indicator.visible{opacity:1}
+.sync-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex-shrink:0}
+.sync-dot.syncing{background:var(--warn);animation:pulse .8s infinite}
+.sync-dot.error{background:var(--over)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* HEADER */
+.app-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between}
+.header-center{flex:1;text-align:center}
+.header-ornament{font-size:9px;letter-spacing:5px;color:var(--purple);opacity:.6;line-height:1}
+.app-title{font-size:clamp(13px,3.5vw,18px);font-weight:800;color:var(--text);letter-spacing:1px;text-transform:uppercase}
+.app-subtitle{font-size:10px;color:var(--text3);font-weight:300}
+.logout-btn{background:none;border:1px solid var(--border);color:var(--text3);border-radius:50px;padding:5px 12px;font-family:"Poppins",sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all var(--tr)}
+.logout-btn:hover{border-color:var(--over);color:var(--over)}
+
+/* TABS TOP */
+.top-tabs{background:var(--bg2);border-bottom:1px solid var(--border);display:flex}
+.top-tab{flex:1;padding:12px 8px;border:none;background:none;font-family:"Poppins",sans-serif;font-size:12px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2px solid transparent;transition:all var(--tr)}
+.top-tab.active{color:var(--purple);border-bottom-color:var(--purple)}
+
+/* CONTAINER */
+.page{display:none;padding:16px 14px 8px;max-width:900px;margin:0 auto}
+.page.active{display:block}
+
+/* METRICS */
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:16px}
+.metric{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px}
+.metric-label{font-size:10px;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
+.metric-value{font-size:20px;font-weight:700;color:var(--text)}
+.metric-sub{font-size:10px;color:var(--text3);margin-top:2px}
+
+/* CARD */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card-title{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+
+/* BARS */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar-label{font-size:12px;color:var(--text2);width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{flex:1;height:7px;background:var(--bg3);border-radius:99px;overflow:hidden}
+.bar-fill{height:100%;border-radius:99px}
+.bar-val{font-size:11px;color:var(--text3);width:80px;text-align:right;white-space:nowrap}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:11px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.4px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:13px;color:var(--text);background:var(--bg);transition:border-color var(--tr)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--purple);background:var(--bg2)}
+.btn-primary{padding:12px 20px;background:var(--purple);color:#fff;border:none;border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background var(--tr);touch-action:manipulation}
+.btn-primary:hover{background:var(--purple2)}
+.btn-primary:active{transform:scale(.97)}
+.form-error{color:var(--over);font-size:12px;margin-top:4px;display:none}
+.form-success{color:var(--ok);font-size:12px;font-weight:600;display:none}
+
+/* BADGE */
+.badge{display:inline-block;padding:3px 9px;border-radius:6px;font-size:10px;font-weight:600}
+.badge-pix{background:#e6f4ea;color:#1a6630}
+.badge-credito{background:#e6f1fb;color:#0c447c}
+.badge-parcelado{background:#fef3e2;color:#7b4a00}
+.badge-instagram{background:#fde8f0;color:#7d1a3c}
+.badge-threads{background:#ede9ff;color:#3c3489}
+.badge-anuncio{background:#fde8e6;color:#7b1d17}
+.badge-organico{background:#e1f5ee;color:#0f6e56}
+
+/* HISTORY LIST */
+.tx-row{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--bg3)}
+.tx-row:last-child{border-bottom:none}
+.tx-info{flex:1;min-width:0}
+.tx-service{font-size:13px;font-weight:600;color:var(--text)}
+.tx-client{font-size:11px;color:var(--purple);font-weight:500}
+.tx-meta{font-size:11px;color:var(--text3);margin-top:2px}
+.tx-badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
+.tx-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.tx-value{font-size:14px;font-weight:700;color:var(--text)}
+.tx-actions{display:flex;gap:6px}
+.btn-remove{padding:4px 10px;font-size:11px;background:none;border:1px solid #f7c1c1;color:var(--over);border-radius:6px;cursor:pointer;font-family:"Poppins",sans-serif;transition:background var(--tr)}
+.btn-remove:hover{background:var(--over-bg)}
+.btn-edit{padding:4px 10px;font-size:11px;background:none;border:1px solid var(--border);color:var(--purple);border-radius:6px;cursor:pointer;font-family:"Poppins",sans-serif;transition:background var(--tr)}
+.btn-edit:hover{background:var(--purple-lt)}
+
+/* FILTERS */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+.filter-row select{flex:1;min-width:130px;padding:8px 10px;border:1.5px solid var(--border);border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:12px;color:var(--text);background:var(--bg)}
+.btn-export{padding:8px 14px;background:var(--purple-lt);color:var(--purple);border:none;border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background var(--tr)}
+.btn-export:hover{background:#d8d0f8}
+.total-filtrado{font-size:12px;color:var(--text3);font-weight:500}
+
+/* EMPTY */
+.empty-state{text-align:center;padding:2rem;color:var(--text3);font-size:13px;font-style:italic}
+
+/* FOOTER NAV */
+.footer-nav{position:fixed;bottom:0;left:0;right:0;height:calc(var(--footer-h) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:stretch;z-index:200;box-shadow:0 -4px 16px rgba(103,65,217,.08)}
+.footer-tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;background:none;border:none;cursor:pointer;font-family:"Poppins",sans-serif;font-size:10px;font-weight:500;color:var(--text3);transition:all var(--tr);touch-action:manipulation;position:relative}
+.footer-tab:hover{color:var(--purple);background:var(--purple-xlt)}
+.footer-tab.active{color:var(--purple)}
+.footer-tab.active::after{content:"";position:absolute;top:0;left:20%;right:20%;height:2px;background:var(--purple);border-radius:0 0 3px 3px}
+
+/* TOAST */
+.toast{position:fixed;bottom:calc(var(--footer-h) + 12px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%) translateY(12px);background:var(--text);color:#fff;padding:9px 18px;border-radius:50px;font-size:12px;font-weight:500;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;z-index:700;white-space:nowrap;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* MODAL EDITAR */
+.modal-overlay{position:fixed;inset:0;background:rgba(26,24,37,.55);z-index:2000;display:none;align-items:flex-end;justify-content:center;padding:0}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--bg2);border-radius:var(--radius) var(--radius) 0 0;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;padding:24px 20px 32px;box-shadow:0 -8px 40px rgba(103,65,217,.18);animation:slideUp .22s ease}
+@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.modal-title{font-size:15px;font-weight:700;color:var(--text)}
+.modal-close{background:none;border:none;font-size:22px;color:var(--text3);cursor:pointer;line-height:1;padding:2px 6px}
+.modal-close:hover{color:var(--text)}
+.modal-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.btn-secondary{padding:11px 18px;background:var(--bg3);color:var(--text2);border:none;border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background var(--tr)}
+.btn-secondary:hover{background:var(--border)}
+
+/* Parcelas inline — sempre visível mas dinâmico */
+.parcel-section{display:none}
+.parcel-section.show{display:flex}
+
+.pgto-origem-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}.metric-grid{grid-template-columns:1fr 1fr}.pgto-origem-grid{grid-template-columns:1fr}}
+
+/* PERIOD SELECTOR */
+.period-bar{display:flex;gap:6px;margin-bottom:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:5px;box-shadow:var(--shadow)}
+.period-btn{flex:1;padding:8px 4px;border:none;background:none;border-radius:var(--radius-sm);font-family:"Poppins",sans-serif;font-size:12px;font-weight:600;color:var(--text3);cursor:pointer;transition:all var(--tr);text-align:center}
+.period-btn.active{background:var(--purple);color:#fff;box-shadow:0 2px 8px rgba(103,65,217,.25)}
+.period-btn:not(.active):hover{background:var(--purple-lt);color:var(--purple)}
+</style>
+
+<script id="pwa-manifest">
+(function(){
+  const icons = [
+    {src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEAUlEQVR4nO3cu1HkQBiFUQ2FSxpsHJAM+BvH+pAMxAFpEABrUFAwzEPP7pbuOT6SjP9Tt1SDdl1ldzcv77WvgXoen//sap6/+MkNPKeUDqLIyQw9Y5SIYdETGHzmsGQIixzY4LOEJUKY9YAGnxLmDGGWAxl8apgjhIupBzD81DLH7E0KwPBT29QZHLWEGHxaNGZLNHgFMPy0asxsDgrA8NO6oTPaOwDDz1oMmdVeARh+1qbvzE5+DQprdjYAd3/Wqs/sngzA8LN252b4aACGn604NcueAYh2MAB3f7bm2ExbAYj2KwB3f7bq0GxbAYj2IwB3f7Zuf8atAET7CsDdnxTfZ90KQDQBEO2i62x/yPM581YAogmAaAIg2s7+n2RWAKIJgGgCIJoAiCYAol3WvoA0D0/Xb6XOdX/7elXqXGvlNWghJQd/nxCOswUimgAKqHn3b+H8LRMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARAt4rMoPkXCMZsOoMY/g3+eUwjrYAtEtM0GUPtTILXPTz+bDQD6EADRBEA0ARBNAEQTANEEQDQBEG3TP4XgOL+P+iCAMH4f9ZMtENEEEKT275Nqn/8QARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEW/Tq0T3DTukUC8Alu1sIWiGizB1D7E9i1z8+6WAGIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaLMHcH/7ejX3Mcecv5XraOlaWrmOllgBiLa7u3l5X+rgD0/Xb0sde9+pu0sr19HStbRyHbUtGgC0zhaIaLuu67qxq8DD0/W/eS8Hhru/ff075u8en//srABEu5zyx2PLg1ZYAYh20XUfe6HaFwIlfc68FYBoAiDaVwC2QaT4PutWAKL9CMAqwNbtz7gVgGi/ArAKsFWHZtsKQLSDAVgF2JpjM20FINrRAKwCbMWpWT65AoiAtTs3w2e3QCJgrfrMrmcAovUKwCrA2vSd2d4rgAhYiyGzOmgLJAJaN3RGBz8DiIBWjZnNScPso1q0YMpNedJbIKsBtU2dwcmvQUVALXPM3qzDa0tECXPedBe5ewuBJSyx21h0+yIE5rDkNrvI/l0IjFHi+bL4A6wYOKX0S5Xqb3AEka32W8T/mmkY0LvwOx8AAAAASUVORK5CYII=',sizes:'192x192',type:'image/png'},
+    {src:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAANUUlEQVR4nO3czZUURwJG0WwdtriB7BDOiP3YMXvkDLJDuIEBmoVOawpomvrJzIjMd+9qllkh5nyvIgueFnb1+29//T36GQBm9Mefvz6NfoYSh70BIw+wLnGwPgf6IGMPMIYoeIzDu5HBB5iTILiNw7qC0Qc4FjHwcw7oBQYf4FwEwfccyAXDD3BuQuD/8gdh9AGa6jGQ/fCGH4Bl6YZA7kMbfgBeUguBxIc1+gDcohADp/6Ahh+AR5w5BH4Z/QBbMf4APOrMW3K6sjnzfywAxjnbbcBpPozhB2APZwmBw38Iww/ACEcPgUP/BsD4AzDK0TfokPVy9EMH4FyOeBtwuBsA4w/AbI64TYcKgCMeMAANR9uoQ1xZHO1QAWg7wiuB6W8AjD8AR3OE7Zo6AI5wgADwktk3bMoritkPDQBuMeMrgeluAIw/AGcz47ZNFQAzHhAArGG2jZsmAGY7GABY20xbN0UAzHQgALClWTZveADMchAAsJcZtm9oAMxwAAAwwugNHBYAoz84AIw2cguHBIDxB4B/jNrE3QPA+APA10Zs464BYPwB4GV7b+RuAWD8AeB1e27lLgFg/AHgOntt5uYBYPwB4DZ7bOemAWD8AeA+W2/o8H8JEADY32YB4Ns/ADxmyy3dJACMPwCsY6tNXT0AjD8ArGuLbfUbAAAIWjUAfPsHgG2svbGrBYDxB4Btrbm1qwSA8QeAfay1uX4DAABBDweAb/8AsK81tvehADD+ADDGoxvsFQAABN0dAL79A8BYj2yxGwAACLorAHz7B4A53LvJbgAAIOjmAPDtHwDmcs823xQAxh8A5nTrRnsFAABBVweAb/8AMLdbttoNAAAECQAACLoqAFz/A8AxXLvZbgAAIOinAeDbPwAcyzXb7QYAAIJeDQDf/gHgmH624W4AACBIAABA0A8DwPU/ABzba1vuBgAAgl4MAN/+AeAcfrTpbgAAIEgAAECQAACAoO8CwPt/ADiXl7bdDQAABAkAAAj6KgBc/wPAOX278W4AACBIAABAkAAAgKB/A8D7fwA4t8utdwMAAEECAACCBAAABAkAAAj6ZVn8ABAAKp433w0AAAQJAAAIEgAAECQAACBIAABAkAAAgKAnfwUQAHrcAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABA0JvRDwBs4+Ond19GP8MRfHj/+e3oZ4AR/FPAcDKG/z5CgBqvAOBEjP/9nB01AgBOwoA9zhlSIgDgBAzXepwlFQIADs5grc+ZUiAAACBIAMCB+aa6HWfL2QkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAoDejH4COj5/efRn9DEfw4f3nt6OfATg/AcDmDP9tns9LCABb8gqATRn/+zk7YEsCgM0YsMc5Q2ArAoBNGK71OEtgCwKA1Rms9TlTYG0CAACCBACr8k11O84WWJMAAIAgAQAAQQIAAIIEAAAECQAACBIAABAkAAAgSAAAQJAAAIAgAQAAQQIAAIIEAAAECQAACBIAABAkAAAgSAAAQJAAAIAgAQAAQQIAAIIEAAAECQAACBIAABAkAAAg6M3oBwA4g4+f3n0Z/QxH8OH957ejn4F/CACABxj+2zyflxAYzysAgDsZ//s5u/EEAMAdDNjjnOFYAgDgRoZrPc5yHAEAcAODtT5nOoYAAIAgAQBwJd9Ut+Ns9ycAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABAkAAAgCABAABBAgAAggQAAAQJAAAIEgAAECQAACBIAABA0JvRDzDSx0/vvox+hiP48P7z29HPAMC6kgFg+G/zfF5CAOA8cq8AjP/9nB3AeaQCwIA9zhkCnEMmAAzXepwlwPElAsBgrc+ZAhxbIgAAgK+dPgB8U92OswU4rtMHAADwPQEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAoNMHwIf3n9+Ofoazeulsnfd2nPe+nPe+nO3+Th8AAMD3EgGgLNf32pk67/U5730573050zESAbAs/oCt6ZqzdN7rcd77ct77cpbjZAJgWfxBW8MtZ+i8H+e89+W89+UMx0oFwLL4A/eIe87Oed/Pee/Lee/L2Y339Ptvf/09+iFG+fjp3ZfRz3AEa/0f1Xlfx3nvy3nvy/DP42lZlqUcAQBQ88efvz7lXgEAAMHfAAAAAgAAkgQAAAQJAAAIEgAAEPT0/D9m/auAHz+9++/oZwCAW314//k/o5/hJX/8+evTsrgBAIAkAQAAQQIAAIIEAAAE/RsAzz8KAADO6XLr34x8kGvM+itKADgyrwAAIEgAAEDQVwHgdwAAcE7fbrwbAAAIEgAAEPRdAHgNAADn8tK2uwEAgCABAABBAgAAgl4MAL8DAIBz+NGmuwEAgKAfBoBbAAA4tte23A0AAAQJAAAIejUAvAYAgGP62Ya7AQCAoJ8GgFsAADiWa7bbDQAABF0VAG4BAOAYrt1sNwAAECQAACDo6gDwGgAA5nbLVrsBAICgmwLALQAAzOnWjb75BkAEAMBc7tlmrwAAIOiuAHALAABzuHeT3QAAQNDdAeAWAADGemSL3QAAQNBDAeAWAADGeHSDH74BEAEAsK81ttcrAAAIWiUA3AIAwD7W2tzVbgBEAABsa82tXfUVgAgAgG2svbF+AwAAQasHgFsAAFjXFtu6yQ2ACACAdWy1qZu9AhABAPCYLbfUbwAAIGjTAHALAAD32XpDN78BEAEAcJs9tnOXVwAiAACus9dm7vYbABEAAK/bcyt3/RGgCACAl+29kbv/LQARAABfG7GNQ/4aoAgAgH+M2sRh/w6ACACgbuQWDv2HgEQAAFWjN3D4vwQ4+gAAYG8zbN/wAFiWOQ4CAPYwy+ZNEQDLMs+BAMBWZtq6aQJgWeY6GABY02wbN1UALMt8BwQAj5px26Z7oEu///bX36OfAQDuNePwP5vuBuDSzAcHAK+ZfcOmDoBlmf8AAeBbR9iu6R/wklcCAMzsCMP/bPobgEtHOlgAWo62UYcKgGU53gEDcH5H3KbDPfAlrwQAGOmIw//scDcAl4588AAc29E36NAPf8ltAAB7OPrwPzvFh7gkBADYwlmG/9mpPswlIQDAGs42/M8O/RuA15z1PxgA+znzlpz2g11yGwDALc48/M9O/wG/JQYAeElh9C+lPuwlIQDAsvSG/1nyQ18SAgBN1eF/lv7w3xIDAOdWH/1LDuIFQgDgXAz/9xzIFQQBwLEY/J9zQDcSAwBzMvq3cVgPEgQAYxj8xzi8DYgCgHUZ+/U50J2JA4CXGfl9/Q9O7MnLnYZhAQAAAABJRU5ErkJggg==',sizes:'512x512',type:'image/png'}
+  ];
+  const manifest = {name:'Financeiro Tarot — Gisele Romano',short_name:'Financeiro',start_url:'./controle-financeiro-tarot.html',scope:'./controle-financeiro-tarot.html',display:'standalone',background_color:'#6741d9',theme_color:'#6741d9',icons};
+  const blob = new Blob([JSON.stringify(manifest)],{type:'application/manifest+json'});
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('link');
+  link.rel='manifest'; link.href=url;
+  document.head.appendChild(link);
+})();
+</script>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADsElEQVR4nO3cy1HjQBiFUdvFljQgDkgG9hPH7CEZiAPSIABmMQUY8EOPbrV0dc7eai0+flpSSdtNQ3c3L+8t16eOx+frbau1J1tYvOs2VeRVFxExh9SMu8qBhUwXNcIuekAhM0TJsIscSMiUUCLs3dgDiJlSSrQ0KmgxU9rYpgaNeCEzhSFbkN4TWsxMZUhrvYIWM1Pr21znoMVMK33a6xS0mGmta4NngxYzc9GlxdH3oWFOTgZtOjM355o8GrSYmatTbR4MWszM3bFG7aGJ8ito05mlONSqCU2Ub0GbzizNz2ZNaKJ8Bm06s1T77ZrQRBE0UXabje0Gy/fRsAlNFEETRdBEETRRti4ISWJCE0XQRBE0UQRNlIvWJ5Dq4enqrfYa97evl7XXWBp3OQqbIuSfhP3FloMogi6oxXRuue4cCZoogiaKoIkiaKIImiiCJoqgiSJoogiaKIImiqCJImiiCJoogiaKoIkiaKIImiixL8l6SXWd4oKe8nWkj7WEPR+2HESJCtpLqkQFDYImiqCJImiiCJoogiaKoIkS96SQL2t8/C/oQGt+/G/LQRRBh1n7439BE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE6Xat+3W+KFA2ise9Jo/FEh7thxEKRr02j8USHsmNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEETRRBE0UQRNF0EQRNFEETRRBE0XQRBE0UQRNFEETRdBEKRr0/e3rZcnj9V137evP5RxaMqGJsr27eXmvceCHp6u3Gsfdd2oqrH39uZzD1KoFDS3sHp+vt61PAkp4fL7eXgz98cPT1d+SJwP77m9f/wz5nYtCogye0EP/gqAmE5oou83m/2a69YnAGB8Nm9BEETRRPoO27WCp9ts1oYnyLWhTmqX52awJTZRfQZvSLMWhVk1oohwM2pRm7o41enRCi5q5OtXmyS2HqJmbc03aQxPlbNCmNHPRpcVOE1rUtNa1wc5bDlHTSp/2eu2hRc3U+jbX+6JQ1ExlSGuj4vRND2oYMzRH3bYzrSltbFOj70OLmlJKtFQ0RlsQhig5FKtMV2HTRY3/7lW3C8LmkJrb1Mn2v+Jet6mutZpe0Ik8U8sbBf8AKQ8Pva9rx7sAAAAASUVORK5CYII=" />
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAEAUlEQVR4nO3cu1HkQBiFUQ2FSxpsHJAM+BvH+pAMxAFpEABrUFAwzEPP7pbuOT6SjP9Tt1SDdl1ldzcv77WvgXoen//sap6/+MkNPKeUDqLIyQw9Y5SIYdETGHzmsGQIixzY4LOEJUKY9YAGnxLmDGGWAxl8apgjhIupBzD81DLH7E0KwPBT29QZHLWEGHxaNGZLNHgFMPy0asxsDgrA8NO6oTPaOwDDz1oMmdVeARh+1qbvzE5+DQprdjYAd3/Wqs/sngzA8LN252b4aACGn604NcueAYh2MAB3f7bm2ExbAYj2KwB3f7bq0GxbAYj2IwB3f7Zuf8atAET7CsDdnxTfZ90KQDQBEO2i62x/yPM581YAogmAaAIg2s7+n2RWAKIJgGgCIJoAiCYAol3WvoA0D0/Xb6XOdX/7elXqXGvlNWghJQd/nxCOswUimgAKqHn3b+H8LRMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARAt4rMoPkXCMZsOoMY/g3+eUwjrYAtEtM0GUPtTILXPTz+bDQD6EADRBEA0ARBNAEQTANEEQDQBEG3TP4XgOL+P+iCAMH4f9ZMtENEEEKT275Nqn/8QARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEEQDQBEE0ARBMA0QRANAEQTQBEEwDRBEA0ARBNAEQTANEW/Tq0T3DTukUC8Alu1sIWiGizB1D7E9i1z8+6WAGIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaAIgmgCIJgCiCYBoAiCaAIgmAKIJgGgCIJoAiCYAogmAaLMHcH/7ejX3Mcecv5XraOlaWrmOllgBiLa7u3l5X+rgD0/Xb0sde9+pu0sr19HStbRyHbUtGgC0zhaIaLuu67qxq8DD0/W/eS8Hhru/ff075u8en//srABEu5zyx2PLg1ZYAYh20XUfe6HaFwIlfc68FYBoAiDaVwC2QaT4PutWAKL9CMAqwNbtz7gVgGi/ArAKsFWHZtsKQLSDAVgF2JpjM20FINrRAKwCbMWpWT65AoiAtTs3w2e3QCJgrfrMrmcAovUKwCrA2vSd2d4rgAhYiyGzOmgLJAJaN3RGBz8DiIBWjZnNScPso1q0YMpNedJbIKsBtU2dwcmvQUVALXPM3qzDa0tECXPedBe5ewuBJSyx21h0+yIE5rDkNrvI/l0IjFHi+bL4A6wYOKX0S5Xqb3AEka32W8T/mmkY0LvwOx8AAAAASUVORK5CYII=" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
-
 <body>
 
-    <!-- Anti-Copy Protection -->
-    <script>
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.onkeydown = function (e) {
-            if (e.keyCode === 123 ||
-                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) ||
-                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83))) {
-                return false;
-            }
-        };
-    </script>
-    <style>
-        body {
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        img,
-        video {
-            pointer-events: none;
-        }
-
-        .play-btn,
-        a,
-        button,
-        .faq-question {
-            pointer-events: auto;
-        }
-    </style>
-
-    <!-- Top Alert & Countdown -->
-    <div class="top-bar-alert">
-        Will you watch someone else live what was meant for you?
+<!-- AUTH -->
+<div class="auth-screen" id="auth-screen">
+  <div class="auth-box">
+    <p class="auth-ornament">✦ ✧ ✦</p>
+    <h1 class="auth-title">Financeiro Tarot</h1>
+    <p class="auth-subtitle">Controle financeiro — Gisele Romano</p>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">Entrar</button>
+      <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">Cadastrar</button>
     </div>
-
-    <div class="countdown-banner">
-        <div class="countdown-text">
-            <i class="fa-solid fa-hourglass-half" style="color: var(--accent-red);"></i>
-            <span>Watch out, the offer ends in:</span>
-        </div>
-        <div class="countdown-timer" id="timer">
-            <div class="time-box"><span class="num" id="hours">00</span><span class="lbl">HOURS</span></div>
-            <span class="dots">:</span>
-            <div class="time-box"><span class="num" id="minutes">03</span><span class="lbl">MIN</span></div>
-            <span class="dots">:</span>
-            <div class="time-box"><span class="num" id="seconds">46</span><span class="lbl">SEC</span></div>
-        </div>
+    <div class="auth-error" id="auth-error"></div>
+    <div class="auth-success" id="auth-success"></div>
+    <div class="auth-field">
+      <label>E-mail</label>
+      <input type="email" id="auth-email" placeholder="seu@email.com" onkeydown="if(event.key==='Enter')handleAuth()" autocomplete="email" />
     </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-grid">
-            <div class="hero-content reveal">
-<h1 class="hero-title" id="headline">The person you love won't wait for you to decide.</h1>
-              <p class="hero-subtitle" id="subheadline">While you hesitate, <strong><em>the heart and bed</em></strong> that were yours might already be occupied.</p>
-                <p style="margin-bottom: 30px; font-size: 18px;">This ritual is for those who <span
-                        style="color: var(--accent-red); font-weight:800;">DO NOT</span> accept losing what is theirs.
-                </p>
-                <a href="#offer" class="btn-buy" id="hero-btn">Enter the Ritual Now 💫</a>
-            </div>
-            <div class="hero-video reveal" style="transition-delay: 0.2s;">
-                <div class="video-wrapper glass-panel">
-                    <video id="hero-vid"
-                        src="https://res.cloudinary.com/daulxi9ve/video/upload/v1/video_oferta_gi_1_uxnbbf.mp4"
-                        poster="https://i.ibb.co/G4SG0B4r/photo-2025-12-03-20-27-28.jpg" playsinline></video>
-                    <div class="play-btn" id="play-btn">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2 class="section-title heading-font reveal">Real Testimonials</h2>
-        <div class="carousel-track">
-            <!-- Items duplicated for smooth infinite scroll -->
-            <!-- Block 1 -->
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Materiais%20Site%20Geral/Captura%20de%20Tela%202025-08-26%20a%CC%80s%2021.56.33.png"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Pietro Evans</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"My ex was in another relationship and I thought there was no way. But something
-                    changed! Suddenly, she started looking for me..."</p>
-            </div>
-
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_11_464074796_1656433281585543_5123980663136705929_n.webp"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Liv Miller</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"I had lost hope. He blocked me on everything, said he never wanted to see me
-                    again. But after the work, it was unbelievable!..."</p>
-            </div>
-
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_2_543692285_17849010216553526_5338883046309995010_n.webp"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Sandra Davies</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"Months of trying, crying, not knowing what to do. When I did the work, I felt
-                    something happening. On the third day, he showed up at my door..."</p>
-            </div>
-
-            <!-- Block 2 (Duplicate) -->
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Materiais%20Site%20Geral/Captura%20de%20Tela%202025-08-26%20a%CC%80s%2021.56.33.png"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Pietro Evans</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"My ex was in another relationship and I thought there was no way. But something
-                    changed! Suddenly, she started looking for me..."</p>
-            </div>
-
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_11_464074796_1656433281585543_5123980663136705929_n.webp"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Liv Miller</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"I had lost hope. He blocked me on everything, said he never wanted to see me
-                    again. But after the work, it was unbelievable!..."</p>
-            </div>
-
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Lilian/imgi_2_543692285_17849010216553526_5338883046309995010_n.webp"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Sandra Davies</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"Months of trying, crying, not knowing what to do. When I did the work, I felt
-                    something happening. On the third day, he showed up at my door..."</p>
-            </div>
-
-            <!-- Block 3 (Duplicate for safety) -->
-            <div class="testimonial-card glass-panel">
-                <div class="testi-header">
-                    <img src="https://models-setembro.b-cdn.net/Materiais%20Site%20Geral/Captura%20de%20Tela%202025-08-26%20a%CC%80s%2021.56.33.png"
-                        alt="User">
-                    <div class="testi-meta">
-                        <h4>Pietro Evans</h4>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                class="fa-solid fa-star"></i></div>
-                    </div>
-                </div>
-                <p class="testi-text">"My ex was in another relationship and I thought there was no way. But something
-                    changed! Suddenly, she started looking for me..."</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Doubts/Features Section -->
-    <section class="doubts-section">
-        <div class="text-center reveal" style="text-align: center;">
-            <h2 class="section-title heading-font" style="margin-bottom: 15px;">Still feel it, but haven't decided?</h2>
-            <p style="font-size: 18px; color: var(--text-muted);">Here are <strong>4 signs</strong> to know if this
-                ritual is for <strong>YOU!</strong></p>
-        </div>
-
-        <div class="doubts-grid">
-            <div class="doubt-card glass-panel reveal">
-                <div class="doubt-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
-                <h3 id="card-title-1">What is the Collective Ritual?</h3>
-                <p>Love work channeled by me, <strong>Madame Gisele</strong>. <em>Only 10 participants per day.</em>
-                    Each name is entered with real intuition and intention. It's not a mere spell. It's magic with
-                    foundation.</p>
-            </div>
-            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.1s;">
-                <div class="doubt-icon"><i class="fa-solid fa-gift"></i></div>
-               <h3 id="card-title-2">What do you receive?</h3>
-                <ul>
-                    <li>Your name and the person's name secured in the ritual;</li>
-                    <li>Channeled intention based on your truth;</li>
-                    <li><strong><em>Ritual recorded on video and sent on WhatsApp;</em></strong></li>
-                    <li>Personal follow-up, directly with me.</li>
-                </ul>
-            </div>
-            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.2s;">
-                <div class="doubt-icon"><i class="fa-solid fa-hourglass-start"></i></div>
-              <h3 id="card-title-3">When do the effects appear?</h3>
-                <p><strong><em>Between 7 and 14 days.</em></strong> The first signs appear as subtle changes — messages,
-                    encounters, unblocking. Every energy has its time. But if you felt it, it's because it has already
-                    started.</p>
-            </div>
-            <div class="doubt-card glass-panel reveal" style="transition-delay: 0.3s;">
-                <div class="doubt-icon"><i class="fa-solid fa-gem"></i></div>
-               <h3 id="card-title-4">And the price?</h3>
-                <p><strong>£17</strong>, a symbolic value. It guarantees your entry and firms your intention.
-                    <strong><em>It is not about the price... It's about the truth of what YOU desire.</em></strong>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offer Section -->
-    <section id="offer" class="offer-section">
-        <h2 class="offer-headline heading-font reveal">Now <span>secure your entry</span> in the Collective Ritual</h2>
-
-        <div class="video-wrapper glass-panel reveal" style="max-width: 600px; margin: 0 auto;">
-            <video src="https://models-setembro.b-cdn.net/Lilian/Vi%CC%81deo%20Oferta.mp4" autoplay loop muted
-                playsinline preload="metadata"></video>
-        </div>
-
-        <div class="price-box glass-panel reveal">
-            <p style="font-size: 18px; text-transform: uppercase;">From <span class="old-price">£143</span> To Only</p>
-           <div class="new-price" id="price-text">£17</div>
-            <a href="https://pay.kiwify.com.br/RfYrLfo" class="btn-buy kiwify-link" style="width: 100%;">Yes! I want to secure my spot for £17</a>
-        </div>
-    </section>
-
-    <!-- Bio Section -->
-    <section class="bio-section">
-        <div class="reveal">
-            <img src="https://i.ibb.co/4wfLh9Wj/photo-2025-12-03-20-27-25.jpg" alt="Madame Gisele" class="bio-img">
-
-        </div>
-        <div class="bio-content reveal" style="transition-delay: 0.2s;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 10px;">
-                Meet</p>
-            <h2 class="heading-font">MADAME GISELE</h2>
-            <p>I ritualize Impossible Reunions. For over 15 years, I've helped restore bonds, open paths, and find what
-                seemed lost.</p>
-            <p>I am Madame Gisele, daughter of religion and guardian of secrets that aren't explained, but felt.</p>
-            <p>Today I lead the Golden Daughters Spiritualship and continue the mission of women who know the strength
-                of silent faith.</p>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section reveal">
-        <h2 class="section-title heading-font">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <div class="faq-question">Will I have access to you? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-answer">
-                <p>Yes, this work requires follow-up, so you will have direct support with me on my private WhatsApp.
-                </p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">What is the timeframe for results? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-answer">
-                <p>We are dealing with magic and enchantment to bring the desired person into your life, the timeframe
-                    is on average 7-14 days, varying for each case.</p>
-                <p style="margin-top:10px;">But I guarantee you will obtain the love you desire and deserve.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Do I need to pay anything else? <i class="fa-solid fa-chevron-down"></i></div>
-            <div class="faq-answer">
-                <p>Not at all, this is a unique promotional price. You will not pay anything beyond what was agreed.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">I've done other works and had no results? <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>I hear this 20 times a day. However, I will give you the same answer I give everyone before they
-                    become my clients:</p>
-                <p style="margin-top:10px;">- You did several works, but NONE was with me.</p>
-                <p style="margin-top:10px;">I am completely direct, sincere, and transparent with my clients.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div style="margin-bottom: 20px;">
-            <a href="#terms">Terms of Use</a> | <a href="#privacy">Privacy Policy</a>
-        </div>
-        <p>Copyright © 2025, all rights reserved.</p>
-        <p style="margin-top: 10px; opacity: 0.6;">Golden Daughters Spiritualship <br> Working hours: Mon - Fri 10:00 to
-            18:00 | Sat - 10:00 to 15:00</p>
-    </footer>
-
-    <!-- Toast Notification -->
-    <div class="toast-popup" id="toast">
-        <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
-        <div class="toast-text" id="toast-msg">George B. just purchased</div>
+    <div class="auth-field">
+      <label>Senha</label>
+      <input type="password" id="auth-password" placeholder="Sua senha" onkeydown="if(event.key==='Enter')handleAuth()" autocomplete="current-password" />
     </div>
+    <button class="auth-btn" id="auth-btn" onclick="handleAuth()">Entrar</button>
+  </div>
+</div>
 
-    <!-- Scripts -->
-    <script>
-        // 1. Countdown Timer
-        const timeH = document.getElementById('hours');
-        const timeM = document.getElementById('minutes');
-        const timeS = document.getElementById('seconds');
-        let timeLeft = 300; // 5 minutes
+<!-- LOADING -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="loading-spinner"></div>
+  <div class="loading-text" id="loading-text">Carregando…</div>
+</div>
 
-        const timer = setInterval(() => {
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                return;
-            }
-            timeLeft--;
-            const h = Math.floor(timeLeft / 3600);
-            const m = Math.floor((timeLeft % 3600) / 60);
-            const s = timeLeft % 60;
+<!-- SYNC -->
+<div class="sync-indicator" id="sync-indicator">
+  <div class="sync-dot" id="sync-dot"></div>
+  <span id="sync-text">Sincronizado</span>
+</div>
 
-            timeH.textContent = String(h).padStart(2, '0');
-            timeM.textContent = String(m).padStart(2, '0');
-            timeS.textContent = String(s).padStart(2, '0');
-        }, 1000);
+<!-- HEADER -->
+<header class="app-header">
+  <div style="width:70px"></div>
+  <div class="header-center">
+    <p class="header-ornament">✦ ✧ ✦</p>
+    <h1 class="app-title">Financeiro Tarot</h1>
+    <p class="app-subtitle">Gisele Romano</p>
+  </div>
+  <button class="logout-btn" onclick="doLogout()">Sair</button>
+</header>
 
-        // 2. Video Play Button
-        const video = document.getElementById('hero-vid');
-        const playBtn = document.getElementById('play-btn');
+<!-- TOP TABS -->
+<nav class="top-tabs">
+  <button class="top-tab active" onclick="showPage('painel')">📊 Painel</button>
+  <button class="top-tab" onclick="showPage('lancamento')">➕ Lançamento</button>
+  <button class="top-tab" onclick="showPage('historico')">📋 Histórico</button>
+</nav>
 
-        if (video && playBtn) {
-            playBtn.addEventListener('click', () => {
-                if (video.paused) {
-                    video.play();
-                    playBtn.style.opacity = '0';
-                    playBtn.style.pointerEvents = 'none';
-                }
-            });
-            video.addEventListener('click', () => {
-                if (!video.paused) {
-                    video.pause();
-                    playBtn.style.opacity = '1';
-                    playBtn.style.pointerEvents = 'auto';
-                }
-            });
-        }
+<!-- PAINEL -->
+<div class="page active" id="page-painel">
+  <div class="period-bar">
+    <button class="period-btn" onclick="setPeriod('hoje')">Hoje</button>
+    <button class="period-btn" onclick="setPeriod('7d')">7 dias</button>
+    <button class="period-btn" onclick="setPeriod('30d')">30 dias</button>
+    <button class="period-btn active" onclick="setPeriod('mes')">Este mês</button>
+    <button class="period-btn" onclick="setPeriod('tudo')">Tudo</button>
+  </div>
+  <div class="metric-grid" id="metrics"></div>
+  <div class="card" style="padding:16px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <div class="card-title" style="margin:0">Evolução da receita</div>
+      <span id="chart-period-label" style="font-size:11px;color:var(--text3);font-weight:500"></span>
+    </div>
+    <div style="position:relative;height:140px">
+      <canvas id="revenue-chart"></canvas>
+    </div>
+    <div id="chart-empty" class="empty-state" style="display:none;padding:1rem">Sem dados para o período</div>
+  </div>
+  <div class="card">
+    <div class="card-title">Receita por serviço</div>
+    <div id="bars-servico"></div>
+  </div>
+  <div class="pgto-origem-grid">
+    <div class="card">
+      <div class="card-title">Por pagamento</div>
+      <div id="bars-pgto"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Por origem</div>
+      <div id="bars-origem"></div>
+    </div>
+  </div>
+</div>
 
-        // 3. Scroll Reveal Animation
-        const reveals = document.querySelectorAll('.reveal');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
+<!-- LANÇAMENTO -->
+<div class="page" id="page-lancamento">
+  <div class="card">
+    <div class="card-title">Registrar atendimento</div>
+    <div class="form-grid">
+      <div class="form-group full">
+        <label>Serviço</label>
+        <select id="f-servico">
+          <optgroup label="── Leituras de tarot ──">
+            <option value="Leitura profissional">Leitura profissional</option>
+            <option value="Leitura amorosa">Leitura amorosa</option>
+            <option value="Leitura de família">Leitura de família</option>
+            <option value="Leitura de saúde">Leitura de saúde</option>
+            <option value="Perguntas detalhadas">Perguntas detalhadas</option>
+            <option value="Confirmação de magia">Confirmação de magia</option>
+          </optgroup>
+          <optgroup label="── Trabalhos espirituais ──">
+            <option value="Adoçamento amoroso">Adoçamento amoroso</option>
+            <option value="Amarração">Amarração</option>
+            <option value="Feitiço de prosperidade">Feitiço de prosperidade</option>
+            <option value="Afastamento de rival">Afastamento de rival</option>
+            <option value="Corte de laços">Corte de laços</option>
+            <option value="Auto adoçamento">Auto adoçamento</option>
+          </optgroup>
+          <optgroup label="── Rituais coletivos ──">
+            <option value="Coletivo adoçamento amoroso">Coletivo adoçamento amoroso</option>
+            <option value="Coletivo afastamento de rival">Coletivo afastamento de rival</option>
+            <option value="Coletivo prosperidade">Coletivo prosperidade</option>
+            <option value="Coletivo quebra de laços">Coletivo quebra de laços</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Valor (R$)</label>
+        <input type="number" id="f-valor" placeholder="0,00" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label>Data</label>
+        <input type="date" id="f-data" />
+      </div>
+      <div class="form-group">
+        <label>Pagamento</label>
+        <select id="f-pgto" onchange="toggleParcel('f-pgto','f-parcel-row')">
+          <option value="pix">PIX</option>
+          <option value="credito">Cartão crédito</option>
+          <option value="parcelado">Cartão parcelado</option>
+        </select>
+      </div>
+      <div class="form-group parcel-section" id="f-parcel-row">
+        <label>Nº de parcelas</label>
+        <select id="f-parcelas">
+          <option value="2x">2x</option>
+          <option value="3x">3x</option>
+          <option value="4x">4x</option>
+          <option value="5x">5x</option>
+          <option value="6x">6x</option>
+          <option value="7x">7x</option>
+          <option value="8x">8x</option>
+          <option value="9x">9x</option>
+          <option value="10x">10x</option>
+          <option value="11x">11x</option>
+          <option value="12x">12x</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Origem do cliente</label>
+        <select id="f-origem">
+          <option value="instagram">Instagram (orgânico)</option>
+          <option value="threads">Threads (orgânico)</option>
+          <option value="anuncio">Anúncio pago</option>
+          <option value="organico">Indicação / orgânico</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Nome do cliente (opcional)</label>
+        <input type="text" id="f-cliente" placeholder="Nome ou apelido" />
+      </div>
+      <div class="form-group full">
+        <label>Observações (opcional)</label>
+        <input type="text" id="f-obs" placeholder="Ex: pagamento parcelado pendente, retorno agendado…" />
+      </div>
+    </div>
+    <div class="form-error" id="form-error"></div>
+    <div style="display:flex;align-items:center;gap:14px;margin-top:14px">
+      <button class="btn-primary" onclick="addEntry()">Registrar atendimento</button>
+      <span class="form-success" id="form-success">✓ Registrado!</span>
+    </div>
+  </div>
+</div>
 
-        reveals.forEach(el => revealObserver.observe(el));
+<!-- HISTÓRICO -->
+<div class="page" id="page-historico">
+  <div class="filter-row">
+    <select id="fil-servico" onchange="renderHistorico()">
+      <option value="">Todos os serviços</option>
+      <option>Leitura profissional</option><option>Leitura amorosa</option>
+      <option>Leitura de família</option><option>Leitura de saúde</option>
+      <option>Perguntas detalhadas</option><option>Confirmação de magia</option>
+      <option>Adoçamento amoroso</option><option>Amarração</option>
+      <option>Feitiço de prosperidade</option><option>Afastamento de rival</option>
+      <option>Corte de laços</option><option>Auto adoçamento</option>
+      <option>Coletivo adoçamento amoroso</option>
+      <option>Coletivo afastamento de rival</option>
+      <option>Coletivo prosperidade</option>
+      <option>Coletivo quebra de laços</option>
+    </select>
+    <select id="fil-pgto" onchange="renderHistorico()">
+      <option value="">Todos pagamentos</option>
+      <option value="pix">PIX</option>
+      <option value="credito">Crédito</option>
+      <option value="parcelado">Parcelado</option>
+    </select>
+    <select id="fil-origem" onchange="renderHistorico()">
+      <option value="">Todas origens</option>
+      <option value="instagram">Instagram</option>
+      <option value="threads">Threads</option>
+      <option value="anuncio">Anúncio</option>
+      <option value="organico">Orgânico</option>
+    </select>
+    <select id="fil-mes" onchange="renderHistorico()">
+      <option value="">Todos os meses</option>
+      <option value="01">Janeiro</option><option value="02">Fevereiro</option>
+      <option value="03">Março</option><option value="04">Abril</option>
+      <option value="05">Maio</option><option value="06">Junho</option>
+      <option value="07">Julho</option><option value="08">Agosto</option>
+      <option value="09">Setembro</option><option value="10">Outubro</option>
+      <option value="11">Novembro</option><option value="12">Dezembro</option>
+    </select>
+    <button class="btn-export" onclick="exportCSV()">⬇ CSV</button>
+  </div>
+  <div class="card" style="padding:16px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div class="card-title" style="margin:0">Lançamentos</div>
+      <span class="total-filtrado" id="total-filtrado"></span>
+    </div>
+    <div id="historico-list"></div>
+  </div>
+</div>
 
-        // 4. FAQ Accordion
-        const faqs = document.querySelectorAll('.faq-item');
-        faqs.forEach(faq => {
-            const question = faq.querySelector('.faq-question');
-            question.addEventListener('click', () => {
-                const isActive = faq.classList.contains('active');
-                faqs.forEach(f => f.classList.remove('active'));
-                if (!isActive) faq.classList.add('active');
-            });
-        });
+<!-- MODAL EDITAR -->
+<div class="modal-overlay" id="edit-modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title">✏️ Editar lançamento</span>
+      <button class="modal-close" onclick="closeEditModal()">✕</button>
+    </div>
+    <input type="hidden" id="edit-id" />
+    <div class="form-grid">
+      <div class="form-group full">
+        <label>Serviço</label>
+        <select id="edit-servico">
+          <optgroup label="── Leituras de tarot ──">
+            <option value="Leitura profissional">Leitura profissional</option>
+            <option value="Leitura amorosa">Leitura amorosa</option>
+            <option value="Leitura de família">Leitura de família</option>
+            <option value="Leitura de saúde">Leitura de saúde</option>
+            <option value="Perguntas detalhadas">Perguntas detalhadas</option>
+            <option value="Confirmação de magia">Confirmação de magia</option>
+          </optgroup>
+          <optgroup label="── Trabalhos espirituais ──">
+            <option value="Adoçamento amoroso">Adoçamento amoroso</option>
+            <option value="Amarração">Amarração</option>
+            <option value="Feitiço de prosperidade">Feitiço de prosperidade</option>
+            <option value="Afastamento de rival">Afastamento de rival</option>
+            <option value="Corte de laços">Corte de laços</option>
+            <option value="Auto adoçamento">Auto adoçamento</option>
+          </optgroup>
+          <optgroup label="── Rituais coletivos ──">
+            <option value="Coletivo adoçamento amoroso">Coletivo adoçamento amoroso</option>
+            <option value="Coletivo afastamento de rival">Coletivo afastamento de rival</option>
+            <option value="Coletivo prosperidade">Coletivo prosperidade</option>
+            <option value="Coletivo quebra de laços">Coletivo quebra de laços</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Valor (R$)</label>
+        <input type="number" id="edit-valor" placeholder="0,00" min="0" step="0.01" />
+      </div>
+      <div class="form-group">
+        <label>Data</label>
+        <input type="date" id="edit-data" />
+      </div>
+      <div class="form-group">
+        <label>Pagamento</label>
+        <select id="edit-pgto" onchange="toggleParcel('edit-pgto','edit-parcel-row')">
+          <option value="pix">PIX</option>
+          <option value="credito">Cartão crédito</option>
+          <option value="parcelado">Cartão parcelado</option>
+        </select>
+      </div>
+      <div class="form-group parcel-section" id="edit-parcel-row">
+        <label>Nº de parcelas</label>
+        <select id="edit-parcelas">
+          <option value="2x">2x</option>
+          <option value="3x">3x</option>
+          <option value="4x">4x</option>
+          <option value="5x">5x</option>
+          <option value="6x">6x</option>
+          <option value="7x">7x</option>
+          <option value="8x">8x</option>
+          <option value="9x">9x</option>
+          <option value="10x">10x</option>
+          <option value="11x">11x</option>
+          <option value="12x">12x</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Origem do cliente</label>
+        <select id="edit-origem">
+          <option value="instagram">Instagram (orgânico)</option>
+          <option value="threads">Threads (orgânico)</option>
+          <option value="anuncio">Anúncio pago</option>
+          <option value="organico">Indicação / orgânico</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Nome do cliente (opcional)</label>
+        <input type="text" id="edit-cliente" placeholder="Nome ou apelido" />
+      </div>
+      <div class="form-group full">
+        <label>Observações (opcional)</label>
+        <input type="text" id="edit-obs" placeholder="Ex: pagamento parcelado pendente, retorno agendado…" />
+      </div>
+    </div>
+    <div class="form-error" id="edit-error"></div>
+    <div class="modal-actions">
+      <button class="btn-primary" onclick="saveEdit()">Salvar alterações</button>
+      <button class="btn-secondary" onclick="closeEditModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
 
-        // 5. Toast Sales Notification
-        const names = ["Amelia J.", "John P.", "Anna L.", "Charles A.", "Isla E.", "Paul G.", "Ava T.", "Lucas F.", "Freya K.", "Rafael T.", "Sophie H.", "Richard V.", "Letty N.", "Ruby D.", "Caroline D.", "Mark E.", "Leo P.", "Timothy O.", "Archie G."];
-        const toast = document.getElementById('toast');
-        const toastMsg = document.getElementById('toast-msg');
+<!-- FOOTER -->
+<footer class="footer-nav">
+  <button class="footer-tab active" id="ft-painel" onclick="showPage('painel')">
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    Painel
+  </button>
+  <button class="footer-tab" id="ft-lancamento" onclick="showPage('lancamento')">
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+    Lançar
+  </button>
+  <button class="footer-tab" id="ft-historico" onclick="showPage('historico')">
+    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+    Histórico
+  </button>
+</footer>
 
-        function showToast() {
-            const randomName = names[Math.floor(Math.random() * names.length)];
-            toastMsg.textContent = `${randomName} just purchased`;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 4000);
-        }
+<div class="toast" id="toast"></div>
 
-        setTimeout(() => {
-            showToast();
-            setInterval(showToast, 14000);
-        }, 5000);
+<script>
+'use strict';
+const SUPABASE_URL  = 'https://dqljiqmoyudhrpigbzuo.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRxbGppcW1veXVkaHJwaWdienVvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3NjAxOTQsImV4cCI6MjA5NTMzNjE5NH0.K2ti29o4nS3l1ACKzp4pExeyKWqJvM95quSIlWeEkXo';
+const TABLE = 'controle_financeiro';
 
-        // 6. URL Params Preservation (Anti-fail snippet)
-        document.addEventListener("DOMContentLoaded", () => {
-            function getUrlParameter(name) {
-                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-                const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-                const results = regex.exec(location.search);
-                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-            }
+const PGTO_LABEL  = {pix:'PIX',credito:'Crédito',parcelado:'Parcelado'};
+const PGTO_BADGE  = {pix:'badge-pix',credito:'badge-credito',parcelado:'badge-parcelado'};
+const ORIG_LABEL  = {instagram:'Instagram',threads:'Threads',anuncio:'Anúncio',organico:'Orgânico'};
+const ORIG_BADGE  = {instagram:'badge-instagram',threads:'badge-threads',anuncio:'badge-anuncio',organico:'badge-organico'};
 
-            const paramsToAppend = {
-                fbclid: getUrlParameter('fbclid'),
-                utm_source: getUrlParameter('utm_source'),
-                utm_medium: getUrlParameter('utm_medium'),
-                utm_campaign: getUrlParameter('utm_campaign')
-            };
+let sb, currentUser, entries = [], appStarted = false, currentAuthTab = 'login';
 
-            document.querySelectorAll('a[href*="pagamento.liliandeoxum.site"]').forEach(link => {
-                try {
-                    const url = new URL(link.href);
-                    for (const key in paramsToAppend) {
-                        if (paramsToAppend[key] && !url.searchParams.has(key)) {
-                            url.searchParams.set(key, paramsToAppend[key]);
-                        }
-                    }
-                    link.href = url.toString();
-                } catch (e) { }
-            });
-        });
+/* ── SYNC UI ── */
+let syncTimer;
+function showSync(state, msg) {
+  const ind=document.getElementById('sync-indicator'),dot=document.getElementById('sync-dot'),txt=document.getElementById('sync-text');
+  clearTimeout(syncTimer);
+  dot.className='sync-dot'+(state==='syncing'?' syncing':state==='error'?' error':'');
+  txt.textContent=msg; ind.classList.add('visible');
+  if(state==='ok') syncTimer=setTimeout(()=>ind.classList.remove('visible'),2500);
+}
 
-    // 1. Identifica o idioma do navegador do visitante
-    const userLang = navigator.language || navigator.userLanguage;
+/* ── LOADING ── */
+function showLoading(msg){document.getElementById('loading-text').textContent=msg||'Carregando…';document.getElementById('loading-overlay').classList.add('visible')}
+function hideLoading(){document.getElementById('loading-overlay').classList.remove('visible')}
 
-    // 2. Só executa se o idioma for Espanhol (América Latina/Espanha)
-    if (userLang.startsWith('es')) {
-        document.addEventListener("DOMContentLoaded", function() {
-            
-            // --- TRADUÇÃO DA HEADLINE E SUBTITLE ---
-            const headline = document.querySelector('#headline');
-            if(headline) headline.innerText = "La persona que amas no esperará a que te decidas.";
-            
-            const subheadline = document.querySelector('#subheadline');
-            if(subheadline) subheadline.innerHTML = "Mientras dudas, <strong><em>el corazón y la cama</em></strong> que eran tuyos ya pueden estar ocupados.";
+/* ── TOAST ── */
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
 
-            // --- TROCA DE MOEDA E PREÇO (LIBRA PARA DÓLAR) ---
-            const priceText = document.querySelector('#price-text');
-            if(priceText) priceText.innerText = "$17"; // Troca £ por $
+/* ── PAGES ── */
+function showPage(p) {
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.top-tab').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.footer-tab').forEach(el=>el.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  const idx={painel:0,lancamento:1,historico:2}[p];
+  document.querySelectorAll('.top-tab')[idx].classList.add('active');
+  document.querySelectorAll('.footer-tab')[idx].classList.add('active');
+  if(p==='painel') renderPainel();
+  if(p==='historico') renderHistorico();
+}
 
-            const oldPrice = document.querySelector('.old-price');
-            if(oldPrice) oldPrice.innerText = "$143";
+/* ── PARCELAS TOGGLE ── */
+function toggleParcel(selectId, rowId) {
+  const val = document.getElementById(selectId).value;
+  const row = document.getElementById(rowId);
+  if (val === 'parcelado') {
+    row.classList.add('show');
+  } else {
+    row.classList.remove('show');
+  }
+}
 
-            // --- BOTÕES DE COMPRA ---
-            const mainBtn = document.querySelector('#hero-btn');
-            if(mainBtn) mainBtn.innerText = "Entra en el Ritual Ahora 💫";
+/* ── AUTH ── */
+function switchAuthTab(t) {
+  currentAuthTab=t;
+  document.getElementById('tab-login').classList.toggle('active',t==='login');
+  document.getElementById('tab-signup').classList.toggle('active',t==='signup');
+  document.getElementById('auth-btn').textContent=t==='login'?'Entrar':'Criar conta';
+  document.getElementById('auth-error').classList.remove('show');
+  document.getElementById('auth-success').classList.remove('show');
+}
+function setAuthErr(msg){const e=document.getElementById('auth-error');e.textContent=msg;e.classList.add('show');document.getElementById('auth-success').classList.remove('show')}
+function setAuthOk(msg){const e=document.getElementById('auth-success');e.textContent=msg;e.classList.add('show');document.getElementById('auth-error').classList.remove('show')}
 
-            const buyBtn = document.querySelector('.kiwify-link');
-            if(buyBtn) buyBtn.innerText = "¡SÍ! QUIERO ASEGURAR MI LUGAR POR $17";
-
-            // --- CONTAGEM REGRESSIVA E ALERTA ---
-            const topAlert = document.querySelector('.top-bar-alert');
-            if(topAlert) topAlert.innerText = "¿Verás a otra persona vivir lo que era para ti?";
-
-            const timerText = document.querySelector('.countdown-text span');
-            if(timerText) timerText.innerText = "Cuidado, la oferta termina en:";
-
-            // --- CARDS DE DÚVIDAS (OS 4 CARDS) ---
-            const t1 = document.querySelector('#card-title-1');
-            if(t1) t1.innerText = "¿Qué es el Ritual Colectivo?";
-            const t2 = document.querySelector('#card-title-2');
-            if(t2) t2.innerText = "¿Qué es lo que recibes?";
-            const t3 = document.querySelector('#card-title-3');
-            if(t3) t3.innerText = "¿Cuándo aparecen los efectos?";
-            const t4 = document.querySelector('#card-title-4');
-            if(t4) t4.innerText = "¿Y el precio?";
-        });
+async function handleAuth() {
+  const email=document.getElementById('auth-email').value.trim();
+  const pass=document.getElementById('auth-password').value;
+  const btn=document.getElementById('auth-btn');
+  if(!email||!pass){setAuthErr('Preencha e-mail e senha.');return}
+  if(pass.length<6){setAuthErr('Senha mínimo 6 caracteres.');return}
+  btn.disabled=true; btn.textContent=currentAuthTab==='login'?'Entrando…':'Criando conta…';
+  try {
+    if(currentAuthTab==='login'){
+      const{data,error}=await sb.auth.signInWithPassword({email,password:pass});
+      if(error) throw error;
+      if(data.user) await enterApp(data.user);
+    } else {
+      const{error}=await sb.auth.signUp({email,password:pass});
+      if(error) throw error;
+      setAuthOk('Conta criada! Confirme seu e-mail antes de entrar.');
+      btn.disabled=false; btn.textContent='Criar conta';
     }
+  } catch(e){
+    const msgs={'Invalid login credentials':'E-mail ou senha incorretos.','Email not confirmed':'Confirme seu e-mail primeiro.','User already registered':'E-mail já cadastrado.'};
+    setAuthErr(msgs[e.message]||e.message);
+    btn.disabled=false; btn.textContent=currentAuthTab==='login'?'Entrar':'Criar conta';
+  }
+}
+
+async function doLogout(){
+  appStarted=false; currentUser=null; entries=[];
+  try{await sb.auth.signOut()}catch(_){}
+  document.getElementById('auth-screen').classList.add('visible');
+  document.getElementById('auth-email').value='';
+  document.getElementById('auth-password').value='';
+  document.getElementById('auth-btn').disabled=false;
+  document.getElementById('auth-btn').textContent='Entrar';
+  switchAuthTab('login');
+}
+
+async function enterApp(user) {
+  if(appStarted) return;
+  appStarted=true; currentUser=user;
+  document.getElementById('auth-screen').classList.remove('visible');
+  showLoading('Carregando lançamentos…');
+  setToday();
+  await loadEntries();
+  hideLoading();
+  renderPainel();
+}
+
+/* ── DB ── */
+async function loadEntries() {
+  showSync('syncing','Carregando…');
+  try {
+    const{data,error}=await sb.from(TABLE).select('*').eq('user_id',currentUser.id).order('criado_em',{ascending:false});
+    if(error) throw error;
+    entries=data||[];
+    showSync('ok','Atualizado');
+  } catch(e){showSync('error','Erro de conexão');console.error(e)}
+}
+
+async function dbAdd(entry) {
+  showSync('syncing','Salvando…');
+  try {
+    const{data,error}=await sb.from(TABLE).insert({...entry,user_id:currentUser.id}).select().single();
+    if(error) throw error;
+    entries.unshift(data);
+    showSync('ok','Salvo!'); return data;
+  } catch(e){showSync('error','Erro ao salvar');console.error(e);return null}
+}
+
+async function dbUpdate(id, patch) {
+  showSync('syncing','Salvando…');
+  try {
+    const{data,error}=await sb.from(TABLE).update(patch).eq('id',id).select().single();
+    if(error) throw error;
+    const idx=entries.findIndex(e=>e.id===id);
+    if(idx!==-1) entries[idx]={...entries[idx],...data};
+    showSync('ok','Salvo!'); return data;
+  } catch(e){showSync('error','Erro ao salvar');console.error(e);return null}
+}
+
+async function dbRemove(id) {
+  showSync('syncing','Removendo…');
+  try {
+    const{error}=await sb.from(TABLE).delete().eq('id',id);
+    if(error) throw error;
+    entries=entries.filter(e=>e.id!==id);
+    showSync('ok','Removido'); return true;
+  } catch(e){showSync('error','Erro ao remover');console.error(e);return false}
+}
+
+/* ── FORM NOVO ── */
+function setToday(){
+  const d=new Date(),pad=n=>String(n).padStart(2,'0');
+  document.getElementById('f-data').value=`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+}
+
+async function addEntry(){
+  const err=document.getElementById('form-error'),ok=document.getElementById('form-success');
+  err.style.display='none'; ok.style.display='none';
+  const servico=document.getElementById('f-servico').value;
+  const valor=parseFloat(document.getElementById('f-valor').value);
+  const data=document.getElementById('f-data').value;
+  const pgto=document.getElementById('f-pgto').value;
+  const parcelas=pgto==='parcelado'?document.getElementById('f-parcelas').value:null;
+  const origem=document.getElementById('f-origem').value;
+  const cliente=document.getElementById('f-cliente').value.trim()||null;
+  const obs=document.getElementById('f-obs').value.trim()||null;
+  if(!valor||valor<=0){err.textContent='Informe um valor válido.';err.style.display='';return}
+  if(!data){err.textContent='Informe a data.';err.style.display='';return}
+  const row=await dbAdd({servico,valor,data_atendimento:data,pgto,parcelas,origem,cliente,obs});
+  if(row){
+    document.getElementById('f-valor').value='';
+    document.getElementById('f-obs').value='';
+    document.getElementById('f-cliente').value='';
+    ok.style.display='';
+    setTimeout(()=>ok.style.display='none',3000);
+  }
+}
+
+/* ── MODAL EDITAR ── */
+function openEditModal(id) {
+  const e = entries.find(x=>x.id===id);
+  if(!e) return;
+  document.getElementById('edit-id').value = id;
+  document.getElementById('edit-servico').value = e.servico;
+  document.getElementById('edit-valor').value = e.valor;
+  document.getElementById('edit-data').value = e.data_atendimento||'';
+  document.getElementById('edit-pgto').value = e.pgto;
+  document.getElementById('edit-origem').value = e.origem;
+  document.getElementById('edit-cliente').value = e.cliente||'';
+  document.getElementById('edit-obs').value = e.obs||'';
+  document.getElementById('edit-error').style.display='none';
+  // parcelas
+  const parcelRow = document.getElementById('edit-parcel-row');
+  if(e.pgto==='parcelado'){
+    parcelRow.classList.add('show');
+    document.getElementById('edit-parcelas').value = e.parcelas||'2x';
+  } else {
+    parcelRow.classList.remove('show');
+  }
+  document.getElementById('edit-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeEditModal() {
+  document.getElementById('edit-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function closeModal(event) {
+  if(event.target===document.getElementById('edit-modal')) closeEditModal();
+}
+
+async function saveEdit() {
+  const id = parseInt(document.getElementById('edit-id').value);
+  const err = document.getElementById('edit-error');
+  err.style.display='none';
+  const servico = document.getElementById('edit-servico').value;
+  const valor = parseFloat(document.getElementById('edit-valor').value);
+  const data = document.getElementById('edit-data').value;
+  const pgto = document.getElementById('edit-pgto').value;
+  const parcelas = pgto==='parcelado' ? document.getElementById('edit-parcelas').value : null;
+  const origem = document.getElementById('edit-origem').value;
+  const cliente = document.getElementById('edit-cliente').value.trim()||null;
+  const obs = document.getElementById('edit-obs').value.trim()||null;
+  if(!valor||valor<=0){err.textContent='Informe um valor válido.';err.style.display='';return}
+  if(!data){err.textContent='Informe a data.';err.style.display='';return}
+  const updated = await dbUpdate(id, {servico,valor,data_atendimento:data,pgto,parcelas,origem,cliente,obs});
+  if(updated){
+    closeEditModal();
+    renderHistorico();
+    renderPainel();
+    toast('Lançamento atualizado ✓');
+  }
+}
+
+/* ── PAINEL ── */
+function fmt(v){return'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
+
+let revenueChart = null;
+
+function renderChart(filtered) {
+  const canvas = document.getElementById('revenue-chart');
+  const empty = document.getElementById('chart-empty');
+  const label = document.getElementById('chart-period-label');
+
+  if (!filtered.length) {
+    canvas.style.display = 'none';
+    empty.style.display = '';
+    if (revenueChart) { revenueChart.destroy(); revenueChart = null; }
+    return;
+  }
+  canvas.style.display = 'block';
+  empty.style.display = 'none';
+
+  // Agrupar por data
+  const agg = {};
+  filtered.forEach(e => {
+    if (!e.data_atendimento) return;
+    agg[e.data_atendimento] = (agg[e.data_atendimento] || 0) + Number(e.valor);
+  });
+
+  // Gerar range de datas
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  let dates = [];
+
+  if (currentPeriod === 'hoje') {
+    dates = [today];
+    label.textContent = 'hoje';
+  } else if (currentPeriod === '7d') {
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(now); d.setDate(d.getDate() - i);
+      dates.push(d.toISOString().slice(0, 10));
+    }
+    label.textContent = 'últimos 7 dias';
+  } else if (currentPeriod === '30d') {
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(now); d.setDate(d.getDate() - i);
+      dates.push(d.toISOString().slice(0, 10));
+    }
+    label.textContent = 'últimos 30 dias';
+  } else if (currentPeriod === 'mes') {
+    const ano = now.getFullYear(), mes = now.getMonth();
+    const dim = new Date(ano, mes + 1, 0).getDate();
+    for (let i = 1; i <= dim; i++) {
+      dates.push(`${ano}-${String(mes+1).padStart(2,'0')}-${String(i).padStart(2,'0')}`);
+    }
+    label.textContent = now.toLocaleString('pt-BR',{month:'long',year:'numeric'});
+  } else {
+    // tudo — agrupar por mês
+    const magg = {};
+    filtered.forEach(e => {
+      if (!e.data_atendimento) return;
+      const m = e.data_atendimento.slice(0, 7);
+      magg[m] = (magg[m] || 0) + Number(e.valor);
+    });
+    const mkeys = Object.keys(magg).sort();
+    const mlabels = mkeys.map(m => {
+      const [y, mo] = m.split('-');
+      return new Date(y, mo-1).toLocaleString('pt-BR',{month:'short',year:'2-digit'});
+    });
+    const mvals = mkeys.map(k => magg[k]);
+    label.textContent = 'todo o período';
+    drawChart(canvas, mlabels, mvals);
+    return;
+  }
+
+  const labels = dates.map(d => {
+    const [,, day] = d.split('-');
+    return currentPeriod === 'mes' ? day : d.slice(5).replace('-','/');
+  });
+  const values = dates.map(d => agg[d] || 0);
+  drawChart(canvas, labels, values);
+}
+
+function drawChart(canvas, labels, values) {
+  if (revenueChart) { revenueChart.destroy(); revenueChart = null; }
+  const ctx = canvas.getContext('2d');
+  const purple = '#6741d9';
+  const purpleLt = 'rgba(103,65,217,0.10)';
+
+  revenueChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        borderColor: purple,
+        backgroundColor: purpleLt,
+        borderWidth: 2,
+        pointBackgroundColor: purple,
+        pointRadius: values.length <= 15 ? 3 : 1,
+        pointHoverRadius: 5,
+        fill: true,
+        tension: 0.35
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => 'R$ ' + ctx.parsed.y.toLocaleString('pt-BR',{minimumFractionDigits:2})
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            font: { family: 'Poppins', size: 10 },
+            color: '#8a85a0',
+            maxRotation: 0,
+            maxTicksLimit: values.length > 20 ? 8 : values.length > 10 ? 10 : values.length
+          }
+        },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: {
+            font: { family: 'Poppins', size: 10 },
+            color: '#8a85a0',
+            callback: v => 'R$' + (v >= 1000 ? (v/1000).toFixed(1)+'k' : v)
+          },
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+let currentPeriod = 'mes';
+
+const PERIOD_LABEL = {hoje:'Hoje','7d':'Últ. 7 dias','30d':'Últ. 30 dias',mes:'Este mês',tudo:'Tudo'};
+
+function setPeriod(p){
+  currentPeriod = p;
+  document.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
+  const map = {hoje:0,'7d':1,'30d':2,mes:3,tudo:4};
+  document.querySelectorAll('.period-btn')[map[p]].classList.add('active');
+  renderPainel();
+}
+
+function filterByPeriod(list){
+  const now = new Date();
+  const today = now.toISOString().slice(0,10);
+  if(currentPeriod==='hoje') return list.filter(e=>e.data_atendimento===today);
+  if(currentPeriod==='7d'){
+    const d=new Date(now); d.setDate(d.getDate()-6);
+    const from=d.toISOString().slice(0,10);
+    return list.filter(e=>e.data_atendimento>=from&&e.data_atendimento<=today);
+  }
+  if(currentPeriod==='30d'){
+    const d=new Date(now); d.setDate(d.getDate()-29);
+    const from=d.toISOString().slice(0,10);
+    return list.filter(e=>e.data_atendimento>=from&&e.data_atendimento<=today);
+  }
+  if(currentPeriod==='mes'){
+    const mes=String(now.getMonth()+1).padStart(2,'0'),ano=now.getFullYear();
+    return list.filter(e=>e.data_atendimento&&e.data_atendimento.startsWith(`${ano}-${mes}`));
+  }
+  return list;
+}
+
+function renderPainel(){
+  const filtered = filterByPeriod(entries);
+  const total=filtered.reduce((s,e)=>s+Number(e.valor),0);
+  const ticket=filtered.length?total/filtered.length:0;
+  const pixTotal=filtered.filter(e=>e.pgto==='pix').reduce((s,e)=>s+Number(e.valor),0);
+  const label=PERIOD_LABEL[currentPeriod];
+
+  document.getElementById('metrics').innerHTML=`
+    <div class="metric"><div class="metric-label">Receita · ${label}</div><div class="metric-value">${fmt(total)}</div><div class="metric-sub">${filtered.length} atendimento${filtered.length!==1?'s':''}</div></div>
+    <div class="metric"><div class="metric-label">Ticket médio</div><div class="metric-value">${fmt(ticket)}</div><div class="metric-sub">por atendimento</div></div>
+    <div class="metric"><div class="metric-label">Receita PIX</div><div class="metric-value">${fmt(pixTotal)}</div><div class="metric-sub">${total>0?Math.round(pixTotal/total*100):0}% do total</div></div>
+    <div class="metric"><div class="metric-label">Total geral</div><div class="metric-value">${fmt(entries.reduce((s,e)=>s+Number(e.valor),0))}</div><div class="metric-sub">${entries.length} atendimentos</div></div>
+  `;
+  renderChart(filtered);
+  renderBars('bars-servico',filtered,'servico','#534AB7');
+  renderBars('bars-pgto',filtered,'pgto','#1D9E75',PGTO_LABEL);
+  renderBars('bars-origem',filtered,'origem','#D85A30',ORIG_LABEL);
+}
+
+function renderBars(elId,data,key,color,labelMap){
+  const el=document.getElementById(elId);
+  if(!data.length){el.innerHTML='<div class="empty-state" style="padding:1rem">Sem dados ainda</div>';return}
+  const agg={};
+  data.forEach(e=>{const k=e[key];agg[k]=(agg[k]||0)+Number(e.valor)});
+  const sorted=Object.entries(agg).sort((a,b)=>b[1]-a[1]);
+  const max=sorted[0][1];
+  el.innerHTML=sorted.map(([k,v])=>`
+    <div class="bar-row">
+      <div class="bar-label">${(labelMap&&labelMap[k])||k}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(v/max*100)}%;background:${color}"></div></div>
+      <div class="bar-val">${fmt(v)}</div>
+    </div>`).join('');
+}
+
+/* ── HISTÓRICO ── */
+function renderHistorico(){
+  const fs=document.getElementById('fil-servico').value;
+  const fp=document.getElementById('fil-pgto').value;
+  const fo=document.getElementById('fil-origem').value;
+  const fm=document.getElementById('fil-mes').value;
+  const list=entries.filter(e=>
+    (!fs||e.servico===fs)&&
+    (!fp||e.pgto===fp)&&
+    (!fo||e.origem===fo)&&
+    (!fm||String(e.data_atendimento||'').includes('-'+fm+'-'))
+  );
+  const totalFilt=list.reduce((s,e)=>s+Number(e.valor),0);
+  document.getElementById('total-filtrado').textContent=list.length?`${list.length} registro${list.length!==1?'s':''} · ${fmt(totalFilt)}`:'';
+  const el=document.getElementById('historico-list');
+  if(!list.length){el.innerHTML='<div class="empty-state">Nenhum registro encontrado.</div>';return}
+  el.innerHTML=list.map(e=>{
+    const d=e.data_atendimento?e.data_atendimento.slice(8)+'/'+e.data_atendimento.slice(5,7)+'/'+e.data_atendimento.slice(0,4):'—';
+    const parc=e.parcelas?` (${e.parcelas})`:'';
+    return`<div class="tx-row">
+      <div class="tx-info">
+        ${e.cliente?`<div class="tx-client">${e.cliente}</div>`:''}
+        <div class="tx-service">${e.servico}</div>
+        <div class="tx-meta">${d}${e.obs?' · '+e.obs:''}</div>
+        <div class="tx-badges">
+          <span class="badge ${PGTO_BADGE[e.pgto]}">${PGTO_LABEL[e.pgto]}${parc}</span>
+          <span class="badge ${ORIG_BADGE[e.origem]}">${ORIG_LABEL[e.origem]}</span>
+        </div>
+      </div>
+      <div class="tx-right">
+        <div class="tx-value">${fmt(Number(e.valor))}</div>
+        <div class="tx-actions">
+          <button class="btn-edit" onclick="openEditModal(${e.id})">editar</button>
+          <button class="btn-remove" onclick="removeEntry(${e.id})">remover</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function removeEntry(id){
+  if(!confirm('Remover este lançamento?')) return;
+  const ok=await dbRemove(id);
+  if(ok){renderHistorico();renderPainel();toast('Lançamento removido')}
+}
+
+/* ── EXPORT ── */
+function exportCSV(){
+  const fs=document.getElementById('fil-servico').value;
+  const fp=document.getElementById('fil-pgto').value;
+  const fo=document.getElementById('fil-origem').value;
+  const fm=document.getElementById('fil-mes').value;
+  const list=entries.filter(e=>(!fs||e.servico===fs)&&(!fp||e.pgto===fp)&&(!fo||e.origem===fo)&&(!fm||String(e.data_atendimento||'').includes('-'+fm+'-')));
+  const cols=['Data','Cliente','Serviço','Valor','Pagamento','Parcelas','Origem','Observações'];
+  const rows=list.map(e=>[
+    e.data_atendimento||'',e.cliente||'',e.servico,
+    Number(e.valor).toFixed(2).replace('.',','),
+    PGTO_LABEL[e.pgto],e.parcelas||'',ORIG_LABEL[e.origem],e.obs||''
+  ]);
+  const csv=[cols,...rows].map(r=>r.map(c=>`"${String(c).replace(/"/g,'""')}"`).join(';')).join('\n');
+  const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;
+  a.download='financeiro-tarot-'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();URL.revokeObjectURL(url);
+}
+
+/* ── INIT ── */
+(async function init(){
+  if(typeof supabase==='undefined'){alert('Erro: Supabase não carregou. Verifique a conexão.');return}
+  sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON,{auth:{persistSession:true,autoRefreshToken:true}});
+  sb.auth.onAuthStateChange((event,session)=>{
+    if(event==='SIGNED_OUT'||event==='USER_DELETED'){appStarted=false;currentUser=null;entries=[];document.getElementById('auth-screen').classList.add('visible')}
+  });
+  try{
+    const{data}=await sb.auth.getSession();
+    if(data?.session?.user) await enterApp(data.session.user);
+    else document.getElementById('auth-screen').classList.add('visible');
+  }catch(e){console.warn(e);document.getElementById('auth-screen').classList.add('visible')}
+})();
 </script>
 </body>
 </html>
-
-      
-
-
-
-
-
-
-
-
-
-
